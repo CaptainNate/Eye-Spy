@@ -1,0 +1,35 @@
+/* GLOBAL */
+:root {
+  --primary: #FFF2BD;
+  --secondary: #F7D02D;
+  --tertiary: #EF7F1B;
+  --quatrinary: #EAD16A;
+  --black: #000000;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  /* add font from google fonts */
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary) !Important;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--primary);
+}
+
+.font-color {
+  color: var(--tertiary);
+}
+
+.font-color:hover {
+  color: var(--quatrinary);
+}
