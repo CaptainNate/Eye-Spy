@@ -6,8 +6,13 @@ import Auth from '../../utils/Auth';
 // logo image
 import logo from '../../images/eye-spy-500x500.png'
 
+// Component imports
+import SearchBar from '../SearchBar';
+
+
 function Header() {
 
+    // logout handler
     const logout = event => {
         event.preventDefault();
         Auth.logout();
@@ -17,12 +22,12 @@ function Header() {
         <header>
             <div className="d-flex justify-content-between">
                 <Link to="/">
-                    
-                    <img src={logo} alt="Eye Spy Logo" height={250} width={250}></img>
-                    
+
+                    <img src={logo} alt="Eye Spy Logo" height={175} width={175}></img>
+
                 </Link>
 
-                <nav className="navbar justify-content-end align-items-end pb-3 px-5">
+                <nav className="navbar justify-content-end align-items-center pb-3 px-5">
                     {Auth.loggedIn() ? (
                         <>
                             <Link to="/dashboard">My Dashboard</Link>
@@ -35,8 +40,16 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Link to="/login" className="font-color px-3 text-decoration-none fs-5">Login</Link>
-                            <Link to="/signup" className="font-color px-3 text-decoration-none fs-5">Signup</Link>
+                            <div className="text-center">
+                                <div className="pb-3">
+                                    <Link to="/login" className="font-color px-3 text-decoration-none fs-6">Login</Link>
+                                    <Link to="/signup" className="font-color px-3 text-decoration-none fs-6">Signup</Link>
+                                    <Link to="/about-us" className="font-color px-3 text-decoration-none fs-6">About Us</Link>
+                                </div>
+                                <div className="d-flex">
+                                    <SearchBar />
+                                </div>
+                            </div>
                         </>
                     )}
                 </nav>
