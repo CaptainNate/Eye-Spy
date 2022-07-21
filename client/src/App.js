@@ -13,9 +13,11 @@ function App() {
   return (
     <Router>
       <div>
-        <Header></Header>
+        <Header />
+        <div>
 
-        <Footer></Footer>
+        </div>
+        <Footer />
       </div>
     </Router>
   );

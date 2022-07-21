@@ -20,16 +20,23 @@ html, body {
   background-color: var(--secondary) !Important;
 }
 
-/* HEADER */
-
-header {
-  background-color: var(--primary);
-}
-
 .font-color {
   color: var(--tertiary);
 }
 
 .font-color:hover {
   color: var(--quatrinary);
+}
+
+/* HEADER */
+header {
+  background-color: var(--primary);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
