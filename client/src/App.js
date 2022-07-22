@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LandingPage from './components/LandingPage';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <div>
         <Header />
         <div>
-
+          <LandingPage />
         </div>
         <Footer />
       </div>

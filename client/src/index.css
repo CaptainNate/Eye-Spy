@@ -40,3 +40,14 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* LANDING PAGE */
+.sign-up-btn {
+  background-color: var(--quatrinary);
+  border: 1px solid var(--black);
+}
+
+.sign-up-btn:hover {
+  background-color: var(--tertiary);
+  border: 1px solid var(--black);
+}
