@@ -43,4 +43,6 @@ function ContactForm() {
     subject: "",
     message: "",
   });
+
+  const [formMessage, setFormMessage] = useState("");
 }
