@@ -56,13 +56,18 @@ function ContactForm() {
         setFormMessage("");
       }
     } else {
-        if (!e.target.value.length) {
-          const name = e.target.name;
-          setFormMessage(
-            `${name.charAt(0).toUpperCase() + name.slice(1)} is required.`
-          );
-        } else {
-          setFormMessage("");
-        }
+      if (!e.target.value.length) {
+        const name = e.target.name;
+        setFormMessage(
+          `${name.charAt(0).toUpperCase() + name.slice(1)} is required.`
+        );
+      } else {
+        setFormMessage("");
       }
+    }
+
+    if (!formMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
+  }
 }
