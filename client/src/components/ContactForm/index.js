@@ -114,7 +114,7 @@ function ContactForm() {
           onBlur={handleChange}
         />
       </Form.Group>
-      
+
 {/* email section */}
       <Form.Group controlId="email">
         <Form.Label>Your Email</Form.Label>
@@ -123,6 +123,17 @@ function ContactForm() {
           name="email"
           type="email"
           placeholder="jdoe@gmail.com"
+          onBlur={handleChange}
+        />
+      </Form.Group>
+
+      {/* subject section */}
+      <Form.Group controlId="subject">
+        <Form.Label>Subject</Form.Label>
+        <Form.Control
+          required
+          name="subject"
+          placeholder="Subject"
           onBlur={handleChange}
         />
       </Form.Group>
