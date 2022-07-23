@@ -35,3 +35,5 @@ import Button from "react-bootstrap/Button";
 //     </form>
 //   );
 // };
+
+export const ContactUs = () => {};
