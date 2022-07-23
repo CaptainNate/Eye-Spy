@@ -101,7 +101,7 @@ function ContactForm() {
         }
       );
   }
-  
+
   return (
     // name section
     <Form onSubmit={sendEmail} id="contactForm">
@@ -115,7 +115,7 @@ function ContactForm() {
         />
       </Form.Group>
 
-{/* email section */}
+      {/* email section */}
       <Form.Group controlId="email">
         <Form.Label>Your Email</Form.Label>
         <Form.Control
@@ -150,5 +150,14 @@ function ContactForm() {
           onBlur={handleChange}
         />
       </Form.Group>
-  )
+
+      {formMessage && <p className="form-message">{formMessage}</p>}
+
+      <Button type="submit" className="btn">
+        Submit
+      </Button>
+    </Form>
+  );
 }
+
+export default ContactForm;
