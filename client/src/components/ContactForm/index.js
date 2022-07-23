@@ -72,5 +72,22 @@ function ContactForm() {
   }
 
   // sends the email or surfaces an error on submission
-  function sendEmail(e) {}
+  function sendEmail(e) {
+    e.preventDefault();
+
+    //     emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    //       .then((result) => {
+    //           console.log(result.text);
+    //       }, (error) => {
+    //           console.log(error.text);
+    //       });
+    //   };
+    // serviceID: gmail, templateID: template_id11uyr, publicKey: aBs3fCS1E1dfeDTvT
+    emailjs.sendForm(
+      "gmail",
+      "template_id11uyr",
+      "#contactForm",
+      "aBs3fCS1E1dfeDTvT"
+    );
+  }
 }
