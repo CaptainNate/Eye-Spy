@@ -7,7 +7,7 @@ import Auth from '../../utils/Auth';
 import logo from '../../images/eye-spy-500x500.png'
 
 // Component imports
-import SearchBar from '../SearchBar';
+// import SearchBar from '../SearchBar';
 
 
 function Header() {
@@ -31,9 +31,9 @@ function Header() {
                     {Auth.loggedIn() ? (
                         <>
                             <Link to="/dashboard">My Dashboard</Link>
-                            {/* <Link to='/favorites'>My Favorites</Link>
+                            <Link to='/favorites'>My Favorites</Link>
                             <Link to='/add-destination'>Add A Destination</Link>
-                            <Link to='/destinations'>View All Destinations</Link> */}
+                            <Link to='/destinations'>View All Destinations</Link>
                             <a href="/" onClick={logout}>
                                 Logout
                             </a>
@@ -41,13 +41,15 @@ function Header() {
                     ) : (
                         <>
                             <div className="text-center">
-                                <div className="pb-3">
+                                <div className="">
                                     <Link to="/login" className="font-color px-3 text-decoration-none fs-6">Login</Link>
                                     <Link to="/signup" className="font-color px-3 text-decoration-none fs-6">Signup</Link>
                                     <Link to="/about-us" className="font-color px-3 text-decoration-none fs-6">About Us</Link>
+                                    <Link to="/contact-us" className="font-color px-3 text-decoration-none fs-6">Contact Us</Link>
+
                                 </div>
                                 <div className="d-flex">
-                                    <SearchBar />
+                                    {/* <SearchBar /> */}
                                 </div>
                             </div>
                         </>

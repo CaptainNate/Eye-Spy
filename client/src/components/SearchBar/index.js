@@ -19,12 +19,11 @@ function SearchBar() {
     }
 
     return (
-        <form method="get" className="d-flex">
+        <form method="get" className="text-center">
             <label htmlFor="header-search">
                 <span className="visually-hidden">Search Destination Posts</span>
             </label>
             <input type="search" className="search-border p-1 m-2 border border-dark border-1 rounded-pill text-center" placeholder="Search destination" onChange={handleChange} value={searchInput} />
-            {/* instead of the word search, I'd like to add in a search icon instead */}
             <button type="submit" className="p-1 btn btn-outine-none">
                 <span class="material-symbols-outlined">
                     search
