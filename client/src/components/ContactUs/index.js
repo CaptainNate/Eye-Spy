@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { validateEmail } from "../../utils/Auth";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 // serviceID: gmail, templateID: template_id11uyr, publicKey: aBs3fCS1E1dfeDTvT
 // template from https://www.emailjs.com/docs/examples/reactjs/
