@@ -3,12 +3,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ContactForm from "../ContactForm/index.js";
-import { FaEnvelope } from "react-icons/fa";
 import "../../App.css";
 
 function Contact() {
   return (
-    <div className="container Jumbotron p-5 mb-0">
+    <div className="container Jumbotron p-5">
       <Container className="text-center">
         <div className="p-md-5">
           <h1>Get in Touch</h1>
@@ -23,8 +22,8 @@ function Contact() {
                 <h4 style={{ color: "#F06543" }}>Contact Info</h4>
                 <p>
                   <a href="mailto:projectuoft@gmail.com">
-                    <span className="pr-3">
-                      <FaEnvelope />
+                    <span class="material-symbols-outlined pe-3">
+                      mail
                     </span>
                     Email
                   </a>
