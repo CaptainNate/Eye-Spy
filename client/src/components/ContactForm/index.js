@@ -70,4 +70,7 @@ function ContactForm() {
       setFormState({ ...formState, [e.target.name]: e.target.value });
     }
   }
+
+  // sends the email or surfaces an error on submission
+  function sendEmail(e) {}
 }
