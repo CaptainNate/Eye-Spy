@@ -103,6 +103,7 @@ function ContactForm() {
   }
   
   return (
+    // name section
     <Form onSubmit={sendEmail} id="contactForm">
       <Form.Group controlId="name">
         <Form.Label>Your Name</Form.Label>
@@ -110,6 +111,18 @@ function ContactForm() {
           required
           name="name"
           placeholder="Jane Doe"
+          onBlur={handleChange}
+        />
+      </Form.Group>
+      
+{/* email section */}
+      <Form.Group controlId="email">
+        <Form.Label>Your Email</Form.Label>
+        <Form.Control
+          required
+          name="email"
+          type="email"
+          placeholder="jdoe@gmail.com"
           onBlur={handleChange}
         />
       </Form.Group>
