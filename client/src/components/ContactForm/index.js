@@ -83,11 +83,22 @@ function ContactForm() {
     //       });
     //   };
     // serviceID: gmail, templateID: template_id11uyr, publicKey: aBs3fCS1E1dfeDTvT
-    emailjs.sendForm(
-      "gmail",
-      "template_id11uyr",
-      "#contactForm",
-      "aBs3fCS1E1dfeDTvT"
-    );
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_id11uyr",
+        "#contactForm",
+        "aBs3fCS1E1dfeDTvT"
+      )
+      .then(
+        function (response) {
+          console.log(response.text);
+          setFormMessage("Message sent!");
+        },
+        function (error) {
+          console.log(error.text);
+          setFormMessage("Your message couldn't be sent.");
+        }
+      );
   }
 }
