@@ -9,12 +9,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // component imports
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import LandingPage from "./components/LandingPage";
 import Contact from "./components/ContactUs";
 
 // page imports
+import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
+import Search from "./pages/Search";
 
 // CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
@@ -40,6 +41,7 @@ function App() {
               <Route exact path="/contact-us" element={<Contact />} />
               <Route exact path="/login" element={<Login />} />
               <Route exact path="/signup" element={<SignUp />} />
+              <Route exact path="/activity-search" element={<Search />} />
             </Routes>
           </div>
           <Footer />
