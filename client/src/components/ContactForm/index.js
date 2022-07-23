@@ -36,4 +36,11 @@ import Button from "react-bootstrap/Button";
 //   );
 // };
 
-function ContactForm() {}
+function ContactForm() {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+}
