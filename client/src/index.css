@@ -28,6 +28,16 @@ html, body {
   color: var(--quatrinary);
 }
 
+.all-btns {
+  background-color: var(--quatrinary);
+  border: 1px solid var(--black);
+}
+
+.all-btns:hover {
+  background-color: var(--tertiary);
+  border: 1px solid var(--black);
+}
+
 /* HEADER */
 header {
   background-color: var(--primary);
@@ -42,12 +52,7 @@ footer {
 }
 
 /* LANDING PAGE */
-.sign-up-btn {
-  background-color: var(--quatrinary);
-  border: 1px solid var(--black);
-}
 
-.sign-up-btn:hover {
-  background-color: var(--tertiary);
-  border: 1px solid var(--black);
-}
+
+
+/* LOGIN */

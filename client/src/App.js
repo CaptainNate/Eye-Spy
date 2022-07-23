@@ -6,10 +6,14 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 // bootstrap styling
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// component imports
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Contact from "./components/ContactUs";
+
+// page imports
+import Login from "./pages/Login";
 
 // CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
@@ -28,10 +32,12 @@ function App() {
         <div>
           <Header />
           <div className="container">
-            <LandingPage />
             <Routes>
+              {/* need to fix landing page to display when site first loads */}
+              {/* but still dynamically change when clicking to different pages */}
               <Route exact path="/" element={<LandingPage />} />
               <Route exact path="/contact-us" element={<Contact />} />
+              <Route exact path="/login" element={<Login />} />
             </Routes>
           </div>
           <Footer />

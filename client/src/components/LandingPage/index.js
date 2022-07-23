@@ -36,7 +36,7 @@ function LandingPage() {
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas
                 </p>
-                <button type="submit" className="sign-up-btn p-2 rounded">submit</button>
+                <button type="submit" className="all-btns p-2 rounded">submit</button>
             </div>
         </div>
     )
