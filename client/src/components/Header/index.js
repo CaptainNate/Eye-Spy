@@ -8,6 +8,7 @@ import logo from "../../images/eye-spy-500x500.png";
 
 // Component imports
 import SearchBar from "../SearchBar";
+import Contact from "../ContactUs";
 
 function Header() {
   // logout handler
@@ -58,6 +59,7 @@ function Header() {
                   </Link>
                   <Link
                     to="/contact-us"
+                    component={Contact}
                     className="font-color px-3 text-decoration-none fs-6"
                   >
                     Contact Us
