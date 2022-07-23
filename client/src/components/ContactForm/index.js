@@ -137,5 +137,18 @@ function ContactForm() {
           onBlur={handleChange}
         />
       </Form.Group>
+
+      {/* message section */}
+      <Form.Group controlId="message">
+        <Form.Label>Message</Form.Label>
+        <Form.Control
+          required
+          name="message"
+          as="textarea"
+          rows="5"
+          placeholder="Message"
+          onBlur={handleChange}
+        />
+      </Form.Group>
   )
 }
