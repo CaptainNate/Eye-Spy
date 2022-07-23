@@ -101,4 +101,17 @@ function ContactForm() {
         }
       );
   }
+  
+  return (
+    <Form onSubmit={sendEmail} id="contactForm">
+      <Form.Group controlId="name">
+        <Form.Label>Your Name</Form.Label>
+        <Form.Control
+          required
+          name="name"
+          placeholder="Jane Doe"
+          onBlur={handleChange}
+        />
+      </Form.Group>
+  )
 }
