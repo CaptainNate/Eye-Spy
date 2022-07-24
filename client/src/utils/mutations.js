@@ -1,4 +1,4 @@
-import gql from "@apollo/client";
+import { gql } from "@apollo/client";
 
 // need to add mutations for ADD_USER with email and password parts
 export const ADD_USER = gql`
