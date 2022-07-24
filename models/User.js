@@ -18,7 +18,8 @@ const UserSchema = new Schema(
     password: {
       type: String,
       required: true,
-      min: 5
+      minLength: 5,
+      maxLength: 32,
     },
     posts: [
       {
