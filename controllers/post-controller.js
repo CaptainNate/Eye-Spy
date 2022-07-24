@@ -109,6 +109,10 @@ const postController = {
             .catch((err) => res.json(err));
     },
 
+    // like a post
+
+    // hate a post
+
     // post a comment
     newComment({ params, body }, res) {
         Post.findOneAndUpdate(
