@@ -65,12 +65,12 @@ const userController = {
         .catch(err => res.json(err));
     },
 
-    // add a favorite post
+    // TO-DO: add a favorite post
     addFavorite({ params }, res) {
         // still need to address this logic
     },   
 
-    // remove a favorite post
+    // TO-DO: remove a favorite post
     deleteFavorite({ params }, res) {
         // still need to address this logic
     },
