@@ -14,4 +14,6 @@ export const ADD_USER = gql`
 `;
 
 // need to add mutations for LOGIN_USER with email and password
-export const LOGIN_USER = gql``;
+export const LOGIN_USER = gql`
+mutation login($email: String!, $password: String!) {}
+`;
