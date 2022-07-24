@@ -47,7 +47,6 @@ const PostSchema = new Schema(
       virtuals: true,
       getters: true,
     },
-    id: false,
   }
 );
 

@@ -21,7 +21,6 @@ const CommentSchema = new Schema(
     toJSON: {
       virtuals: true,
     },
-    id: false,
   }
 );
 
