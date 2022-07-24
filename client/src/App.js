@@ -15,6 +15,7 @@ import Contact from "./components/ContactUs";
 // page imports
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
+import AboutUs from "./pages/AboutUs.js"
 
 // CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
@@ -40,6 +41,7 @@ function App() {
               <Route exact path="/contact-us" element={<Contact />} />
               <Route exact path="/login" element={<Login />} />
               <Route exact path="/signup" element={<SignUp />} />
+              <Route exact path="/about-us" element={<AboutUs />} />
             </Routes>
           </div>
           <Footer />
