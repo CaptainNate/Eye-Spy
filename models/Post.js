@@ -1,26 +1,60 @@
-const { Schema, model, Types } = require("mongoose");
+const { Schema, model } = require("mongoose");
 const dateFormat = require("../utils/dateFormat");
 
 const PostSchema = new Schema(
   {
-    title: {},
-    location: {},
-    description: {},
+    post_title: {
+      type: String,
+      required: true,
+      minlength: 1,
+      maxLength: 200,
+    },
+    post_text: {
+      type: String,
+      required: true,
+      minlength: 1,
+      maxlength: 5000,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (createdAt) => dateFormat(createdAt),
+    },
+    // location may change according to Google API implementation
+    location: {
+      type: String,
+      required: false,
+    },
     // we still need to think how we'll save the photo
     // photo: {},
-    like_count: {},
-    hate_count: {},
-    comments: [{}],
+    like_count: {
+      type: Number,
+      default: 0,
+    },
+    hate_count: {
+      type: Number,
+      default: 0,
+    },
+    comments: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Comment",
+      },
+    ],
   },
   {
     toJSON: {
       virtuals: true,
       getters: true,
     },
-    id: false,
   }
 );
 
-const User = model("User", UserSchema);
+// returns the number of comments a Post has
+UserSchema.virtual("commentsCount").get(function () {
+  return this.comments.length;
+});
 
-module.exports = User;
+const Post = model("Post", PostSchema);
+
+module.exports = Post;
