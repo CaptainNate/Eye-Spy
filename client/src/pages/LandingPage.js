@@ -1,7 +1,7 @@
 import React from 'react';
 
 // image import
-import landingPageImg from '../../images/landing-page-img.png';
+import landingPageImg from '../images/landing-page-img.png';
 
 function LandingPage() {
 

@@ -41,6 +41,7 @@ function Header() {
                                 <div className="">
                                     <Link to="/login" className="font-color px-3 text-decoration-none fs-6">Login</Link>
                                     <Link to="/signup" className="font-color px-3 text-decoration-none fs-6">Signup</Link>
+                                    <Link to="/activity-search" className="font-color px-3 text-decoration-none fs-6">Destination Search</Link>
                                     <Link to="/about-us" className="font-color px-3 text-decoration-none fs-6">About Us</Link>
                                     <Link to="/contact-us" className="font-color px-3 text-decoration-none fs-6">Contact Us</Link>
 
