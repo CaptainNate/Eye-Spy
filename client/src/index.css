@@ -31,11 +31,13 @@ html, body {
 .all-btns {
   background-color: var(--quatrinary);
   border: 1px solid var(--black);
+  color: var(--black);
 }
 
 .all-btns:hover {
   background-color: var(--tertiary);
   border: 1px solid var(--black);
+  color:  var(--black);
 }
 
 /* HEADER */
@@ -56,3 +58,9 @@ footer {
 
 
 /* LOGIN */
+
+
+/* ABOUT US */
+
+
+/* CONTACT US */
