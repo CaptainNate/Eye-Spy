@@ -52,7 +52,7 @@ const Login = (props) => {
                         <img src={loginImg} alt="couple paddle boarding" />
                     </div>
                 </div>
-                {/* need to add following line to form once mutations are complete */}
+                {/* will need to add the following line in the form */}
                 {/* onSubmit={handleFormSubmit} */}
                 <form className="px-5 mx-5 col">
                     <div className="d-flex row">

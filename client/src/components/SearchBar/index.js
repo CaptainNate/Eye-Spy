@@ -1,35 +1,25 @@
-import { React, useState } from 'react';
+import React from 'react';
+// import Dropdown from 'react-bootstrap/Dropdown';
+// import DropdownButton from 'react-bootstrap/DropdownButton';
 
 function SearchBar() {
 
-    // functional component for a search bar
-    const [searchInput, setSearchInput] = useState("");
-
-    const searchOptions = [];
-
-    const handleChange = (event) => {
-        event.preventDefault();
-        setSearchInput(event.target.value);
-    };
-
-    if (searchInput.length > 0) {
-        searchOptions.filter((options) => {
-            return options.name.match(searchInput);
-        });
-    }
-
     return (
-        <form method="get" className="text-center">
-            <label htmlFor="header-search">
-                <span className="visually-hidden">Search Destination Posts</span>
-            </label>
-            <input type="search" className="search-border p-1 m-2 border border-dark border-1 rounded-pill text-center" placeholder="Search destination" onChange={handleChange} value={searchInput} />
-            <button type="submit" className="p-1 btn btn-outine-none">
-                <span class="material-symbols-outlined">
-                    search
-                </span>
-            </button>
-        </form>
+        <div>
+            {/* dropdown menu not dropping down items on click, need help with that */}
+            <div className="dropdown text-center">
+                <button className="all-btns p-2 rounded px-5 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select an outdoor activity
+                </button>
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a className="dropdown-item" href="/">Hiking Trails</a></li>
+                    <li><a className="dropdown-item" href="/">Camping</a></li>
+                    <li><a className="dropdown-item" href="/">Mountain Biking</a></li>
+                    <li><a className="dropdown-item" href="/">Swimming</a></li>
+                    <li><a className="dropdown-item" href="/">Water Sports</a></li>
+                </ul>
+            </div>
+        </div>
     )
 }
 

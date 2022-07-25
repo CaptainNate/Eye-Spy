@@ -4,9 +4,15 @@ import React, { useState } from 'react';
 
 // import Auth from '../utils/auth';
 
-import loginImg from '../images/login-signup-img.png';
+import loginImg from "../images/login-signup-img.png";
 
 const SignUp = () => {
+    // const [formState, setFormState] = useState({
+    //     username: "",
+    //     email: "",
+    //     password: "",
+    // });
+    // const [addUser, { error }] = useMutation(ADD_USER);
 
     // const [formState, setFormState] = useState({
     //     username: '',
@@ -64,8 +70,8 @@ const SignUp = () => {
                                 name="email"
                                 type="email"
                                 id="email"
-                                // value={formState.email}
-                                // onChange={handleChange}
+                            // value={formState.email}
+                            // onChange={handleChange}
                             />
                         </div>
                         {/* input password */}
@@ -77,8 +83,8 @@ const SignUp = () => {
                                 name="password"
                                 type="password"
                                 id="password"
-                                // value={formState.password}
-                                // onChange={handleChange}
+                            // value={formState.password}
+                            // onChange={handleChange}
                             />
                         </div>
                         {/* submit login data */}
@@ -93,7 +99,7 @@ const SignUp = () => {
                 {/* {error && <div>Signup failed</div>} */}
             </div>
         </main>
-    )
-}
+    );
+};
 
 export default SignUp;
