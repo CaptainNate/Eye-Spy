@@ -1,5 +1,5 @@
+import { Modal } from "bootstrap";
 import React from "react";
-// import Bootstrap from "bootstrap";
 
 function Favorites() {
   return (
@@ -10,10 +10,7 @@ function Favorites() {
         <img src="" class="card-img-top" alt="..."></img>
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+          <p class="card-text">Description of the place</p>
           <button
             type="button"
             class="btn btn-primary"
@@ -47,7 +44,7 @@ function Favorites() {
               ></button>
             </div>
             <div class="modal-body">
-              <img src="" class="img-fluid" alt=""></img>
+              <img src="" class="img-fluid" alt="..."></img>
               <p>Title:</p>
               <p>Location:</p>
               <p>Description:</p>
