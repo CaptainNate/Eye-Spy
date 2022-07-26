@@ -20,6 +20,9 @@ function favorites() {
       </div>
       <div class="modal-body">
       <img src="" class="img-fluid" alt=""></img>
+      <p>Title:</p>
+      <p>Location:</p>
+      <p>Description:</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
