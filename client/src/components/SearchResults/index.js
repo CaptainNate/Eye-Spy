@@ -37,6 +37,7 @@ function SearchResults(props) {
                         <label for="validationTextarea" className="form-label">Comments</label>
                         <textarea className="form-control" id="add-comment" placeholder="Add A Comment" name="add-comment" type="text" rows="3" style={{ height: "100%" }}></textarea>
                     </div>
+                    < br/>
                     <div className="card-body text-center">
                         <Button variant="primary" onClick={() => setModalShow(true)}>
                             View all comments
@@ -49,6 +50,11 @@ function SearchResults(props) {
                     </div>
                 </div>
             </div>
+            < br/>
+            < br/>
+            < br/>
+
+
         </div>
     )
 }

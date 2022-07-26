@@ -14,7 +14,7 @@ query posts($username: String) {
         _id
         comment_text
         username
-        posts
+        post
       }
     }
   }
@@ -61,6 +61,14 @@ query user($username: String!) {
                 username
                 post
             }
+        }
+        likes {
+           _id
+           post 
+        }
+        hates {
+            _id
+            hates
         }
         favorites {
             // not sure what to put in favorites

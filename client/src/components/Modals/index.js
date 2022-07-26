@@ -13,7 +13,7 @@ function Modals(props) {
             centered
         >
             <Modal.Header closeButton>
-                <Modal.Title dialogClassName="modalTitle" id="modal-title">
+                <Modal.Title className="modalTitle" id="modal-title">
                     Modal heading
                 </Modal.Title>
             </Modal.Header>
