@@ -1,7 +1,12 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
 
 // bootstrap styling
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,12 +20,13 @@ import Contact from "./components/ContactUs";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
-import AboutUs from "./pages/AboutUs.js"
+import AboutUs from "./pages/AboutUs.js";
 import Search from "./pages/Search";
+import Favorites from "./components/Favorites";
 
 // CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3000',
+  uri: "http://localhost:3000",
 });
 
 const client = new ApolloClient({
@@ -44,6 +50,7 @@ function App() {
               <Route exact path="/signup" element={<SignUp />} />
               <Route exact path="/about-us" element={<AboutUs />} />
               <Route exact path="/activity-search" element={<Search />} />
+              <Route exact path="/favorites" element={<Favorites />} />
             </Routes>
           </div>
           <Footer />

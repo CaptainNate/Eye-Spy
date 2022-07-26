@@ -21,9 +21,7 @@ function Contact() {
                 <h4 style={{ color: "#F06543" }}>Contact Info</h4>
                 <p>
                   <a href="mailto:projectuoft@gmail.com">
-                    <span class="material-symbols-outlined pe-3">
-                      mail
-                    </span>
+                    <span class="material-symbols-outlined pe-3">mail</span>
                     Email
                   </a>
                 </p>
