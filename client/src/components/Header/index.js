@@ -45,10 +45,10 @@ function Header() {
                     Login
                   </Link>
                   <Link
-                    to="/favorites"
+                    to="/dashboard"
                     className="font-color px-3 text-decoration-none fs-6"
                   >
-                    Favorites
+                    Dashboard
                   </Link>
                   <Link
                     to="/signup"

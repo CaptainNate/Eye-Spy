@@ -22,7 +22,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import AboutUs from "./pages/AboutUs.js";
 import Search from "./pages/Search";
-import Favorites from "./components/Favorites";
+import Dashboard from "./pages/Dashboard";
 
 // CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
@@ -50,7 +50,7 @@ function App() {
               <Route exact path="/signup" element={<SignUp />} />
               <Route exact path="/about-us" element={<AboutUs />} />
               <Route exact path="/activity-search" element={<Search />} />
-              <Route exact path="/favorites" element={<Favorites />} />
+              <Route exact path="/dashboard" element={<Dashboard />} />
             </Routes>
           </div>
           <Footer />
