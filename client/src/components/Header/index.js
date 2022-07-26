@@ -46,6 +46,8 @@ function Header() {
                                     <Link to="/contact-us" className="font-color px-3 text-decoration-none fs-6">Contact Us</Link>
                                     {/* this must be taken out once the login auth is functioning on the backend */}
                                     <Link to="/add-destination" className="font-color px-3 text-decoration-none fs-6">Add Destination</Link>
+                                    {/* search results will only display when the submit button is clicked in the SearchBar */}
+                                    <Link to="/search-results" className="font-color px-3 text-decoration-none fs-6">Search Results</Link>
                                 </div>
                             </div>
                         </>

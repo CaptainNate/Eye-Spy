@@ -5,11 +5,13 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 
 // bootstrap styling
 import "bootstrap/dist/css/bootstrap.min.css";
+import Button from 'react-bootstrap/Button'
 
 // component imports
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Contact from "./components/ContactUs";
+import Modals from "./components/Modals";
 
 // page imports
 import LandingPage from "./pages/LandingPage";
@@ -18,6 +20,7 @@ import SignUp from "./pages/Signup";
 import AboutUs from "./pages/AboutUs.js"
 import Search from "./pages/Search";
 import AddDestination from "./pages/AddDestination";
+import SearchResults from "./components/SearchResults";
 
 // CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
@@ -30,8 +33,21 @@ const client = new ApolloClient({
 });
 
 function App() {
+
+  // useState variables for modals
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <ApolloProvider client={client}>
+        <Button variant="primary" onClick={() => setModalShow(true)}>
+          Launch vertically centered modal
+        </Button>
+
+        <Modals
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+
       <Router>
         <div className="">
           <Header />
@@ -46,6 +62,7 @@ function App() {
               <Route exact path="/about-us" element={<AboutUs />} />
               <Route exact path="/activity-search" element={<Search />} />
               <Route exact path="/add-destination" element={<AddDestination />} />
+              <Route exact path="/search-results" element={<SearchResults />} />
             </Routes>
           </div>
           <Footer />
