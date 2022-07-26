@@ -1,7 +1,12 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
 
 // bootstrap styling
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,14 +22,18 @@ import Modals from "./components/Modals";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
-import AboutUs from "./pages/AboutUs.js"
+import AboutUs from "./pages/AboutUs.js";
 import Search from "./pages/Search";
+<<<<<<< HEAD
 import AddDestination from "./pages/AddDestination";
 import SearchResults from "./components/SearchResults";
+=======
+import Dashboard from "./pages/Dashboard";
+>>>>>>> 688b0540ccbefced8bc315bf7eb09cc06d570abb
 
 // CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3000',
+  uri: "http://localhost:3000",
 });
 
 const client = new ApolloClient({
@@ -48,8 +57,12 @@ function App() {
               <Route exact path="/signup" element={<SignUp />} />
               <Route exact path="/about-us" element={<AboutUs />} />
               <Route exact path="/activity-search" element={<Search />} />
+<<<<<<< HEAD
               <Route exact path="/add-destination" element={<AddDestination />} />
               <Route exact path="/search-results" element={<SearchResults />} />
+=======
+              <Route exact path="/dashboard" element={<Dashboard />} />
+>>>>>>> 688b0540ccbefced8bc315bf7eb09cc06d570abb
             </Routes>
           </div>
           <Footer />

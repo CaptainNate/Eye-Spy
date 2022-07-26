@@ -152,7 +152,7 @@ function ContactForm() {
       </Form.Group>
 
       {formMessage && <p className="form-message">{formMessage}</p>}
-
+      <br></br>
       <Button type="submit" className="btn">
         Submit
       </Button>
