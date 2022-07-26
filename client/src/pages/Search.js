@@ -9,7 +9,11 @@ const Search = () => {
 
     // add conditional statements to generate proper search here
 
+    // when search button is clicked, display searchResults component
+    // need to add conditional statements for this
+
     return (
+
         <main className='container p-5 mb-5'>
             <div className='d-flex justify-content-center align-items-center'>
                 <div className="px-5 mx-5">

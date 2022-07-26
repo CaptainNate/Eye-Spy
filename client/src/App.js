@@ -34,27 +34,14 @@ const client = new ApolloClient({
 
 function App() {
 
-  // useState variables for modals
-  const [modalShow, setModalShow] = React.useState(false);
-
   return (
     <ApolloProvider client={client}>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
-          Launch vertically centered modal
-        </Button>
-
-        <Modals
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-        />
 
       <Router>
         <div className="">
           <Header />
           <div className="">
             <Routes>
-              {/* need to fix landing page to display when site first loads */}
-              {/* but still dynamically change when clicking to different pages */}
               <Route exact path="/" element={<LandingPage />} />
               <Route exact path="/contact-us" element={<Contact />} />
               <Route exact path="/login" element={<Login />} />
