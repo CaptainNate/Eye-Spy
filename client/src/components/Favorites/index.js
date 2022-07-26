@@ -4,7 +4,7 @@ import React from "react";
 function Favorites() {
   return (
     <div>
-      <h1 class="fs-1 fw-bold">Favorites</h1>
+      <h1 class="fs-1 fw-bold text-center">Favorites</h1>
       {/* // <!-- Button trigger modal --> */}
       <div class="card col-sm-4">
         <img src="" class="card-img-top" alt="..."></img>
@@ -57,9 +57,9 @@ function Favorites() {
               >
                 Close
               </button>
-              <button type="button" class="btn btn-primary">
+              {/* <button type="button" class="btn btn-primary">
                 Save changes
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
