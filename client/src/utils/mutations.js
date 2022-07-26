@@ -25,3 +25,13 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+// post mutation
+
+// comment mutation
+
+// auth mutation
+
+// query mutation
+
+// mutation mutation
