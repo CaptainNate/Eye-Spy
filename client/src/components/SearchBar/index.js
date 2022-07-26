@@ -4,6 +4,8 @@ import React from 'react';
 
 function SearchBar() {
 
+    
+
     return (
         <div>
             {/* dropdown menu not dropping down items on click, need help with that */}
@@ -17,6 +19,7 @@ function SearchBar() {
                     <li><a id="search-bar-biking" className="dropdown-item" href="/">Mountain Biking</a></li>
                     <li><a id="search-bar-swimming" className="dropdown-item" href="/">Swimming</a></li>
                     <li><a id="search-bar-water-sport" className="dropdown-item" href="/">Water Sports</a></li>
+                    <li><a id="search-bar-view-all" className="dropdown-item" href="/">View All</a></li>
                 </ul>
             </div>
         </div>

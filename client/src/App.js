@@ -5,13 +5,11 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 
 // bootstrap styling
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from 'react-bootstrap/Button'
 
 // component imports
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Contact from "./components/ContactUs";
-import Modals from "./components/Modals";
 
 // page imports
 import LandingPage from "./pages/LandingPage";
