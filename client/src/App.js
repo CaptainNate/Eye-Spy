@@ -17,6 +17,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import AboutUs from "./pages/AboutUs.js"
 import Search from "./pages/Search";
+import AddDestination from "./pages/AddDestination";
 
 // CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
@@ -34,7 +35,7 @@ function App() {
       <Router>
         <div className="">
           <Header />
-          <div className="container">
+          <div className="">
             <Routes>
               {/* need to fix landing page to display when site first loads */}
               {/* but still dynamically change when clicking to different pages */}
@@ -44,6 +45,7 @@ function App() {
               <Route exact path="/signup" element={<SignUp />} />
               <Route exact path="/about-us" element={<AboutUs />} />
               <Route exact path="/activity-search" element={<Search />} />
+              <Route exact path="/add-destination" element={<AddDestination />} />
             </Routes>
           </div>
           <Footer />

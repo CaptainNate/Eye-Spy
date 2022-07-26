@@ -44,6 +44,8 @@ function Header() {
                                     <Link to="/activity-search" className="font-color px-3 text-decoration-none fs-6">Destination Search</Link>
                                     <Link to="/about-us" className="font-color px-3 text-decoration-none fs-6">About Us</Link>
                                     <Link to="/contact-us" className="font-color px-3 text-decoration-none fs-6">Contact Us</Link>
+                                    {/* this must be taken out once the login auth is functioning on the backend */}
+                                    <Link to="/add-destination" className="font-color px-3 text-decoration-none fs-6">Add Destination</Link>
                                 </div>
                             </div>
                         </>

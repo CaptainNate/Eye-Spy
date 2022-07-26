@@ -12,11 +12,11 @@ function SearchBar() {
                     Select an outdoor activity
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a className="dropdown-item" href="/">Hiking Trails</a></li>
-                    <li><a className="dropdown-item" href="/">Camping</a></li>
-                    <li><a className="dropdown-item" href="/">Mountain Biking</a></li>
-                    <li><a className="dropdown-item" href="/">Swimming</a></li>
-                    <li><a className="dropdown-item" href="/">Water Sports</a></li>
+                    <li><a id="search-bar-hiking" className="dropdown-item" href="/">Hiking Trails</a></li>
+                    <li><a id="search-bar-camping" className="dropdown-item" href="/">Camping</a></li>
+                    <li><a id="search-bar-biking" className="dropdown-item" href="/">Mountain Biking</a></li>
+                    <li><a id="search-bar-swimming" className="dropdown-item" href="/">Swimming</a></li>
+                    <li><a id="search-bar-water-sport" className="dropdown-item" href="/">Water Sports</a></li>
                 </ul>
             </div>
         </div>
