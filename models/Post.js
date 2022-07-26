@@ -51,7 +51,7 @@ const PostSchema = new Schema(
 );
 
 // returns the number of comments a Post has
-UserSchema.virtual("commentsCount").get(function () {
+PostSchema.virtual("commentsCount").get(function () {
   return this.comments.length;
 });
 
