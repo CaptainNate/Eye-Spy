@@ -27,6 +27,20 @@ export const LOGIN_USER = gql`
 `;
 
 // post mutation
+export const POST = gql`
+  mutation post($postText: String!) {
+    post(postText: $String) {
+      _id
+      postText
+      createdAt
+      username
+      commentCount
+      comments {
+        _id
+      }
+    }
+  }
+`;
 
 // comment mutation
 
