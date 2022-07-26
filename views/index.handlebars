@@ -1,31 +1,28 @@
-<body>
-    <form action="/upload" method="post"
-        style="display: grid; gap: .5rem; grid-template-columns: auto 1fr; max-width: 500px; margin: 0 auto;"
-        enctype="multipart/form-data">
-        <label for="file">File:</label>
-        <input type="file" id="file" name="file" required />
-        <button style="grid-column: span 2;" type="submit">Share</button>
-    </form>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<form action="/upload" method="post"
+    style="display: grid; gap: .5rem; grid-template-columns: auto 1fr; max-width: 500px; margin: 0 auto;"
+    enctype="multipart/form-data">
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="post-title" />
+
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="post-description" />
+
+    <label for="file">File:</label>
+    <input type="file" id="file" name="file" required onchange="loadFile(event)" />
+
+    <button style="grid-column: span 2;" type="submit">Share</button>
+
+    {{!-- Image preview --}}
+    <img id="output" />
     <script>
-        $(document).ready(function () {
-            let imagesPreview = function (input, placeToInsertImagePreview) {
-                if (input.files) {
-                    let filesAmount = input.files.length;
-                    for (i = 0; i < filesAmount; i++) {
-                        let reader = new FileReader();
-                        reader.onload = function (event) {
-                            $($.parseHTML("<img>"))
-                                .attr("src", event.target.result)
-                                .appendTo(placeToInsertImagePreview);
-                        };
-                        reader.readAsDataURL(input.files[i]);
-                    }
-                }
+        var loadFile = function (event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('output');
+                output.src = reader.result;
             };
-            $("#input-files").on("change", function () {
-                imagesPreview(this, "div.preview-images");
-            });
-        });
+            reader.readAsDataURL(event.target.files[0]);
+        };
     </script>
-</body>
+
+</form>
