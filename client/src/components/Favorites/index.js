@@ -6,7 +6,7 @@ function Favorites() {
     <div>
       <h1 class="fs-1 fw-bold">Favorites</h1>
       {/* // <!-- Button trigger modal --> */}
-      <div class="card">
+      <div class="card col-sm-4">
         <img src="" class="card-img-top" alt="..."></img>
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
