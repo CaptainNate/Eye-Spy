@@ -73,10 +73,12 @@ app.get('/images', (req, res) => {
             items.forEach(item => {
                 let encodedBuffer = item.img.data.toString('base64');
                 // console.log('item: ', item.title)
-                images+= `
-                <h1>${item.title}</h1><br>
-                <h3>${item.description}</h3><br>
-                <img src="data:'image/png';base64,${encodedBuffer}" style="width:200px;height:auto;" />
+                images += `
+                <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; border: 1px solid; padding: 1rem; margin: 1rem; max-width: 500px">
+                    <h1>${item.title}</h1><br>
+                    <h3>${item.description}</h3><br>
+                    <img src="data:'image/png';base64,${encodedBuffer}" style="width:200px;height:auto;" />
+                </div>
                 `;
             });
         }
@@ -99,9 +101,11 @@ app.get('/:id', ({ params }, res) => {
             const mimeType = 'image/png'; // e.g., image/png
 
             res.send(`
-                <h1>${dbImage.title}</h1><br>
-                <h3>${dbImage.description}</h3><br>
-                <img src="data:${mimeType};base64,${encodedBuffer}" style="width:400px;height:auto;" />
+                <div class="container">
+                    <h1>${dbImage.title}</h1><br>
+                    <h3>${dbImage.description}</h3><br>
+                    <img src="data:${mimeType};base64,${encodedBuffer}" style="width:400px;height:auto;" />
+                </div>
                 `)
 
 

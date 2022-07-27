@@ -9,6 +9,10 @@ const File = new mongoose.Schema({
         type: String,
         required: false,
     },
+    address: {
+        type: String,
+        required: false,
+    },
     // path: {
     //     type: String,
     //     required: true,
