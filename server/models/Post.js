@@ -31,8 +31,7 @@ const PostSchema = new Schema(
       required: false,
       unique: true,
     },
-    // we still need to think how we'll save the photo
-    // photo: {},
+    // TO-DO: add image logic
     username: {
       type: String,
       required: true,

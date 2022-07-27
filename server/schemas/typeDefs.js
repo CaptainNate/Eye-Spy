@@ -19,10 +19,10 @@ const typeDefs = gql`
     _id: ID
     post_title: String
     post_text: String
-    createdAt: Date
+    createdAt: String
     location: String
-    like_count: Number
-    hate_count: Number
+    like_count: Int
+    hate_count: Int
     comments: [Comment]
   }
 
