@@ -8,11 +8,16 @@ const CommentSchema = new Schema(
       required: true,
       trim: true,
     },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (createdAt) => dateFormat(createdAt),
+    },
     username: {
       type: String,
       required: true,
     },
-    post: {
+    post_title: {
       type: String,
       required: true,
     },

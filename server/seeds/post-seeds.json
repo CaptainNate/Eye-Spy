@@ -1,8 +1,10 @@
 [
   {
-    "post_title": "This is a test post",
+    "username": "John",
+    "post_title": "this is a post title",
     "post_text": "This is a test text",
     "location": "This is a location",
+    "category": "this is a category",
     "comments": []
   }
 ]

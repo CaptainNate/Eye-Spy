@@ -6,6 +6,7 @@ const PostSchema = new Schema(
     post_title: {
       type: String,
       required: true,
+      unique: true,
       minlength: 1,
       maxLength: 200,
     },
@@ -14,6 +15,10 @@ const PostSchema = new Schema(
       required: true,
       minlength: 1,
       maxlength: 5000,
+    },
+    category: {
+      type: String,
+      required: true,
     },
     createdAt: {
       type: Date,
@@ -24,9 +29,13 @@ const PostSchema = new Schema(
     location: {
       type: String,
       required: false,
+      unique: true,
     },
-    // we still need to think how we'll save the photo
-    // photo: {},
+    // TO-DO: add image logic
+    username: {
+      type: String,
+      required: true,
+    },
     like_count: {
       type: Number,
       default: 0,
