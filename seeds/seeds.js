@@ -13,16 +13,23 @@ db.once("open", async () => {
 
     await User.create(userSeeds);
 
+    // creating posts and connecting to users
     for (let i = 0; i < postSeeds.length; i++) {
-      const { _id, postAuthor } = await Post.create(postSeeds[i]);
+      const { _id, username } = await Post.create(postSeeds[i]);
       const user = await User.findOneAndUpdate(
-        { username: postAuthor },
+        { username: username },
         {
           $addToSet: {
             posts: _id,
           },
         }
       );
+    }
+
+    // creating comments and connecting to posts
+    for (let i = 0; i < commentSeeds.length; i++) {
+      const { _id, username } = await Comment.create(commentSeeds[i]);
+      const comment = await 
     }
   } catch (err) {
     console.error(err);

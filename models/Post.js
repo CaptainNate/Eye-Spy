@@ -15,6 +15,10 @@ const PostSchema = new Schema(
       minlength: 1,
       maxlength: 5000,
     },
+    category: {
+      type: String,
+      required: true,
+    },
     createdAt: {
       type: Date,
       default: Date.now,
@@ -27,6 +31,10 @@ const PostSchema = new Schema(
     },
     // we still need to think how we'll save the photo
     // photo: {},
+    username: {
+      type: String,
+      required: true,
+    },
     like_count: {
       type: Number,
       default: 0,
