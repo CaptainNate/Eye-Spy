@@ -23,7 +23,7 @@ function LandingPage() {
     {/* <h2 class="font-weight-light"></h2> */}
     <div class="d-flex flex-row flex-nowrap row g-0">
       
-        <div class="card card-body"><p>Wow! I never thougth I would find a site like this. I was able to find so many cool and unique places that were so close to home!</p>
+        <div class="card card-body"><p>Wow! I never thought I would find a site like this. I was able to find so many cool and unique places that were so close to home!</p>
         <p> - Scott H.</p></div>
         <div class="card card-body"><p>At first I thought it was such a weird webpage but it ended up being exactly what I was looking for! I can't even recommend it enough to anyone who likes being outdoors.</p>
         <p>-Theodore M.</p></div>
