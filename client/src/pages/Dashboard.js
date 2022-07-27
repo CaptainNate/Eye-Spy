@@ -94,7 +94,7 @@ function Dashboard(props) {
           </div>
           <div className="card-body text-center">
             {/* Open Modal */}
-            <br></br>
+  
             <Button variant="primary" onClick={() => setModalShow(true)}>
               Show all comments
             </Button>
@@ -103,8 +103,7 @@ function Dashboard(props) {
               show={modalShow}
               onHide={() => setModalShow(false)}
             ></Modals>
-            <br></br>
-            <br></br>
+
           </div>
         </div>
       </div>
