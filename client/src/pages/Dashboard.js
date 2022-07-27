@@ -103,6 +103,8 @@ function Dashboard(props) {
               show={modalShow}
               onHide={() => setModalShow(false)}
             ></Modals>
+            <br></br>
+            <br></br>
           </div>
         </div>
       </div>
