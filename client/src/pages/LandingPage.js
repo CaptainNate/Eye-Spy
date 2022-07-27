@@ -15,10 +15,10 @@ function LandingPage() {
 
                 {/* webpage "introduction" */}
                 <div className="">
-                    <h2 className="">Welcome to Eye Spy...</h2>
-                    <br />
-                    <br />
-                    <p>hello</p>
+                    <h2 className="">Welcome to Eye Spy!</h2>
+                    {/* <br /> */}
+                    {/* <br /> */}
+                    <p class="fs-4 text">We are Your <em>Next Best Friend</em> for finding a new unique treasure. We'll help you find the next place you want to explore! </p>
     <div class="container-fluid py-2 card mb-3 scrolling-wrapper">
     {/* <h2 class="font-weight-light"></h2> */}
     <div class="d-flex flex-row flex-nowrap row g-0">
