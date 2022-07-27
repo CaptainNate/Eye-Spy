@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 const dateFormat = require("../utils/dateFormat");
+const bcrypt = require('bcrypt');
 
 const UserSchema = new Schema(
   {
@@ -93,6 +94,11 @@ UserSchema.virtual("favoritesCount").get(function () {
 UserSchema.virtual("postsCount").get(function () {
   return this.posts.length;
 });
+
+// compare the incoming password with the hashed password
+UserSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
 
 const User = model("User", UserSchema);
 
