@@ -18,39 +18,39 @@ function AddDestination() {
 
     return (
         <div>
-            <div className="container">
+            <div className="container p-5 mb-5">
                 <div className="">
                     <div>
-                        <h2 className="text-center my-4 pb-4 border-bottom border-dark">Add Destination</h2>
+                        <h1 className="text-center mb-5 pb-3 border-bottom border-dark header-font">Add Destination</h1>
                     </div>
-                    <form>
-                        <div className="d-flex">
-                            <div className="row">
-                                <div className="col-6">
-                                    <div>
+                    <form className="container d-flex justify-content-center">
+                        <div className="">
+                            <div className="row justify-content-center">
+                                <div className="col-5 p-4 m-2 rounded shadow-lg floating-box-bg">
+                                    <div className="pb-2">
                                         <label className="form-label">Title</label>
                                         <input id="destination-title" className="form-control" placeholder="Title" name="title" type="text"></input>
                                     </div>
-                                    <div>
+                                    <div className="">
                                         <label className="form-label">Address</label>
                                         <input id="destination-address" className="form-control" placeholder="Address" name="address" type="text"></input>
                                     </div>
                                 </div>
-                                <div className="col-6">
-                                    <div className="mt-4">
+                                <div className="col-5 p-4 m-2 rounded shadow-lg floating-box-bg">
+                                    <div className="">
                                         <label htmlFor="validationTextarea" className="form-label">Description</label>
                                         <textarea className="form-control is-invalid" id="validationTextarea" placeholder="Please enter a brief description" name="description" type="text" rows="5" style={{ height: "100%" }} required></textarea>
                                     </div>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-5 m-2 rounded shadow-lg floating-box-bg">
                                     <div>
-                                        <h3 className="text-center my-4 pb-4 border-bottom border-dark">Please Select A Category</h3>
+                                        <h4 className="text-center my-4 pb-3 border-bottom border-dark subHeader-font">Please Select A Category</h4>
                                         <SearchBar />
                                     </div>
                                 </div>
                                 {/* upload image */}
-                                <div className="col-6 text-center">
-                                    <h3 className="text-center my-4 pb-4 border-bottom border-dark">Upload A Photo</h3>
+                                <div className="col-5 m-2 text-center rounded shadow-lg floating-box-bg">
+                                    <h4 className="text-center my-4 pb-3 border-bottom border-dark subHeader-font">Upload A Photo</h4>
                                     <div className="text-center">
                                         <label htmlFor="file" className="File"></label>
                                         <input className="text-center" type="file" id="img-file" name="file" accept="image/*" required onChange={loadFile} />
@@ -72,8 +72,6 @@ function AddDestination() {
             < br />
             < br />
             </div>
-            < br />
-            < br />
         </div>
     )
 }

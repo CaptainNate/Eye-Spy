@@ -15,24 +15,24 @@ const Search = () => {
     return (
         <main className='container p-5 mb-5'>
             <div className='d-flex justify-content-center align-items-center'>
-                <div className="px-5 mx-5">
-                    <div>
-                        <img src={searchImg} alt="couple paddle boarding" style={{height:"600px"}} />
-                    </div>
-                </div>
                 <div>
-                    <div className='text-center m-5'>
-                        <h2 className='mb-4 pb-4 border-bottom border-dark'>What's your next big adventure?</h2>
-                        <h4 className=''>Please select the activity you're interested in</h4>
+                    <div className='text-center m-3'>
+                        <h1 className='mb-5 pb-3 border-bottom border-dark header-font'>What's your next big adventure?</h1>
+                        <h4 className='subHeader-font'>Please select the activity you're interested in</h4>
                     </div>
                     <div className="d-flex justify-content-center align-items-center">
                         <div className="m-2">
                             <SearchBar />
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="all-btns p-2 rounded"><a href="../components/SearchResults">Search</a>
+                            <button type="submit" className="all-btns p-2 rounded"><a href="../components/SearchResults" className="text-decoration-none search-anchor">Search</a>
                             </button>
                         </div>
+                    </div>
+                </div>
+                <div className="px-5 mx-5">
+                    <div>
+                        <img src={searchImg} alt="couple paddle boarding" style={{height:"600px"}} />
                     </div>
                 </div>
             </div>

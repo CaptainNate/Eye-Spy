@@ -57,7 +57,7 @@ const Login = (props) => {
                 <form className="px-5 mx-5 col">
                     <div className="d-flex row">
                         <div>
-                            <h2 className="mb-5 pb-3 border-bottom border-dark text-center">Login</h2>
+                            <h1 className="mb-5 pb-3 border-bottom border-dark text-center header-font">Login</h1>
                         </div>
                         {/* input email */}
                         <div>
