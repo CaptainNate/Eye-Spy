@@ -17,7 +17,7 @@ const CommentSchema = new Schema(
       type: String,
       required: true,
     },
-    post: {
+    post_title: {
       type: String,
       required: true,
     },

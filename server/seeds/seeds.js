@@ -10,7 +10,8 @@ db.once("open", async () => {
     await User.deleteMany({});
     await Comment.deleteMany({});
     await Post.deleteMany({});
-
+    
+    // creating all users
     await User.create(userSeeds);
 
     // creating posts and connecting to users
@@ -26,10 +27,30 @@ db.once("open", async () => {
       );
     }
 
-    // creating comments and connecting to posts
+    // creating comments and connecting to users and posts
     for (let i = 0; i < commentSeeds.length; i++) {
-      const { _id, username } = await Comment.create(commentSeeds[i]);
-      // const comment = await 
+      // creating comment as is
+      const { _id, username, post_title } = await Comment.create(
+        commentSeeds[i]
+      );
+      // connecting to user
+      const user = await User.findOneAndUpdate(
+        { username: username },
+        {
+          $addToSet: {
+            comments: _id,
+          },
+        }
+      );
+      // connecting to posts
+      const post = await Post.findOneAndUpdate(
+        { post_title: post_title },
+        {
+          $addToSet: {
+            comments: _id,
+          },
+        }
+      );
     }
   } catch (err) {
     console.error(err);

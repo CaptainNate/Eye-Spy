@@ -6,6 +6,7 @@ const PostSchema = new Schema(
     post_title: {
       type: String,
       required: true,
+      unique: true,
       minlength: 1,
       maxLength: 200,
     },
@@ -28,6 +29,7 @@ const PostSchema = new Schema(
     location: {
       type: String,
       required: false,
+      unique: true,
     },
     // we still need to think how we'll save the photo
     // photo: {},
