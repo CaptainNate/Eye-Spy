@@ -29,7 +29,7 @@ db.once("open", async () => {
     // creating comments and connecting to posts
     for (let i = 0; i < commentSeeds.length; i++) {
       const { _id, username } = await Comment.create(commentSeeds[i]);
-      const comment = await 
+      // const comment = await 
     }
   } catch (err) {
     console.error(err);
