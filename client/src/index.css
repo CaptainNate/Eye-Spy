@@ -66,6 +66,23 @@ footer {
 
 /* CONTACT US */
 
+/* ADD DESTINATION */
+input[type="file"] {
+  /* display: none; */
+}
+
+.addDest-btn {
+  background-color: var(--tertiary);
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.addDest-btn:hover {
+  background-color: var(--quatrinary);
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
 
 /* MODAL */
 .modalTitle {
