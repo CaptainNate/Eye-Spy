@@ -61,6 +61,19 @@ const SignUp = () => {
                         <div>
                             <h2 className="mb-5 pb-3 border-bottom border-dark text-center">Sign Up Today!</h2>
                         </div>
+                        {/* input username */}
+                        <div>
+                            <label htmlFor='username' className="form-label pe-3">Username</label>
+                            <input
+                                className="form-control p-1 mb-4"
+                                placeholder="Your username"
+                                name="username"
+                                type="text"
+                                id="username"
+                            // value={formState.username}
+                            // onChange={handleChange}
+                            />
+                        </div>
                         {/* input email */}
                         <div>
                             <label htmlFor='email' className="form-label pe-3">Email</label>

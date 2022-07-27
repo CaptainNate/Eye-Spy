@@ -13,7 +13,6 @@ const Search = () => {
     // need to add conditional statements for this
 
     return (
-
         <main className='container p-5 mb-5'>
             <div className='d-flex justify-content-center align-items-center'>
                 <div className="px-5 mx-5">
@@ -31,13 +30,16 @@ const Search = () => {
                             <SearchBar />
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="all-btns p-2 rounded">
-                                Search
+                            <button type="submit" className="all-btns p-2 rounded"><a href="../components/SearchResults">Search</a>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <br />
+            <br />
+            <br />
+            <br />
         </main>
     )
 }
