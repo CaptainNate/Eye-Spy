@@ -76,10 +76,28 @@ function LandingPage() {
                     <br></br>
                     Signing up lets you add places to your favorites, submit places to be added to our webpage, allows you to comment and like places, and many more! Sign up now!
                 </p>
-                <button type="submit" className="all-btns p-2 rounded">Sign Up</button>
+<div className="">
+<a
+className="all-btns p-2 rounded text-decoration-none"
+href="/signup"
+role="button"
+>
+Sign Up!
+</a>
+</div>
             </div>
         </div>
     )
 }
+{/* <button type="submit" href="/signup" className="all-btns p-2 rounded">Sign Up</button> */}
+// <div className="">
+// <a
+//   className="all-btns p-2 rounded text-decoration-none px-5"
+//   href="/contact-us"
+//   role="button"
+// >
+//   Questions? Contact Us!
+// </a>
+// </div>
 
 export default LandingPage;
