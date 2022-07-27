@@ -72,9 +72,11 @@ function LandingPage() {
             <div className="py-5 mb-5 text-center border-top border-dark">
                 <h3 className="pb-4">Sign Up Today!</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas
+                    Ever wanted to be apart of a big picture? A new exciting journey is just one click away! Join us today and help us help you make the best unique exploration website you can see!
+                    <br></br>
+                    Signing up lets you add places to your favorites, submit places to be added to our webpage, allows you to comment and like places, and many more! Sign up now!
                 </p>
-                <button type="submit" className="all-btns p-2 rounded">Submit</button>
+                <button type="submit" className="all-btns p-2 rounded">Sign Up</button>
             </div>
         </div>
     )
