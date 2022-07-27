@@ -22,7 +22,7 @@ function LandingPage() {
     <div class="container-fluid py-2 card mb-3 scrolling-wrapper">
     {/* <h2 class="font-weight-light"></h2> */}
     <div class="d-flex flex-row flex-nowrap row g-0">
-      
+        {/* Static Reviews */}
         <div class="card card-body"><p>Wow! I never thought I would find a site like this. I was able to find so many cool and unique places that were so close to home!</p>
         <p> - Scott H.</p></div>
         <div class="card card-body"><p>At first I thought it was such a weird webpage but it ended up being exactly what I was looking for! I can't even recommend it enough to anyone who likes being outdoors.</p>
@@ -39,30 +39,6 @@ function LandingPage() {
     </div>
 </div>
 
-{/* <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div> */}
-
-                    {/* <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas
-                        < br/>
-                        < br/>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas
-                    </p> */}
                 </div>
             </div>
 
@@ -76,28 +52,18 @@ function LandingPage() {
                     <br></br>
                     Signing up lets you add places to your favorites, submit places to be added to our webpage, allows you to comment and like places, and many more! Sign up now!
                 </p>
-<div className="">
-<a
-className="all-btns p-2 rounded text-decoration-none"
-href="/signup"
-role="button"
->
-Sign Up!
-</a>
-</div>
+                <div className="">
+                <a
+                className="all-btns p-2 rounded text-decoration-none"
+                href="/signup"
+                role="button"
+                >
+                Sign Up!
+                </a>
+                </div>
             </div>
         </div>
     )
 }
-{/* <button type="submit" href="/signup" className="all-btns p-2 rounded">Sign Up</button> */}
-// <div className="">
-// <a
-//   className="all-btns p-2 rounded text-decoration-none px-5"
-//   href="/contact-us"
-//   role="button"
-// >
-//   Questions? Contact Us!
-// </a>
-// </div>
 
 export default LandingPage;
