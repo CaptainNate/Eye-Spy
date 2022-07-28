@@ -4,6 +4,7 @@ const { webpack } = require('webpack');
 const {InjectManifest} = require('workbox-webpack-plugin');
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+const {SourceMapDevToolPlugin } = require("webpack");
 
 module.exports = {
     context: __dirname,
@@ -23,7 +24,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
         publicPath: '/',
+        sourceMapFilename: "[name].js.map"
     },
+    devtool: "source-map",
     optimization: {
         runtimeChunk: 'single',
         splitChunks: {
@@ -50,6 +53,11 @@ module.exports = {
             {
                 test: /\.(png|j?g|svg|gif)?$/,
                 use: 'file-loader?name=./images[name].[ext]'
+            },
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
             }
         ]
     },
@@ -79,6 +87,9 @@ module.exports = {
         fingerprints: false,
         inject: false,
         background_color: "#EF7F1B"
+    }),
+    new SourceMapDevToolPlugin({
+        filename: "[file].map"
     })
 ],
 };
