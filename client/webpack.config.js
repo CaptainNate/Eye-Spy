@@ -3,6 +3,7 @@ const path = require('path');
 const { webpack } = require('webpack');
 const {InjectManifest} = require('workbox-webpack-plugin');
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 module.exports = {
     context: __dirname,
@@ -62,6 +63,22 @@ module.exports = {
     }),
     new BundleAnalyzerPlugin({
         analyzerMode: "static"
+    }),
+    new WebpackPwaManifest({
+        short_name: "Eye Spy",
+        name: "Eye Spy",
+        icons: [
+          {
+            src: path.resolve ("src/images/eye-spy-500x500.png"),
+            sizes: [96, 128, 192, 384, 512],
+            destination: path.join("assets", "icons")
+          }
+        ],
+        start_url: "./index.html",
+        theme_color: "#FFF2BD",
+        fingerprints: false,
+        inject: false,
+        background_color: "#EF7F1B"
     })
 ],
 };
