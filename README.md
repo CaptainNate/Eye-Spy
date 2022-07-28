@@ -26,7 +26,6 @@ One of our team members thought it would be cool to have an app that let you fin
 
 ## Future Development
 
-## Documentation
 
 ## Contributors
 * Nathaniel Chan **[nchan22](https://github.com/nchan22)**
