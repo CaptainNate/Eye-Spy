@@ -10,7 +10,7 @@
 4. [Technologies Applied](#technologies)
 5. [Future Development](#future)
 6. [Documentation](#documentation)
-7. [Contributors] (#contributors)
+7. [Contributors](#contributors)
 8. [Links](#links)
 
 ## Description
@@ -20,12 +20,21 @@ Love going outside but hate a crowd?  Then this is your app.  Search the other u
 One of our team members thought it would be cool to have an app that let you find good places to bicycle or go for a hike that weren't too crowded.  With that, we came up with the idea of a crowd sourced database that automatically dropped locations once they'd become too crowded.
 
 ## Challenges
+Using GraphQl to save images onto our server was a tremendous challenge.  We also had difficulty tying our front and back ends together.  Also, splitting our bundles so they were small enough to cache was an issue.
 
 ## Technologies Applied
-*
+* React
+* HTML
+* CSS
+* Javascript
+* BootStrap
+* Node.js
+* GraphQL
+* Mongoose
+* MongoDB
 
 ## Future Development
-
+* Finish current development
 
 ## Contributors
 * Nathaniel Chan **[nchan22](https://github.com/nchan22)**
