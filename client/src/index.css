@@ -18,11 +18,21 @@ body {
   /* add font from google fonts */
   width: 100%;
   height: 100%;
-  background-color: var(--secondary) !Important;
+  background-color: var(--secondary) !important;
+}
+
+.header-font {
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 900;
+}
+
+.subHeader-font {
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 300;
 }
 
 .font-color {
-  color: var(--tertiary);
+  color: var(--tertiary) !important;
 }
 
 .font-color:hover {
@@ -30,15 +40,19 @@ body {
 }
 
 .all-btns {
-  background-color: var(--quatrinary);
-  border: 1px solid var(--black);
-  color: var(--black);
+  background-color: var(--quatrinary) !important;
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
 }
 
 .all-btns:hover {
-  background-color: var(--tertiary);
-  border: 1px solid var(--black);
-  color: var(--black);
+  background-color: var(--tertiary) !important;
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
+}
+
+.floating-box-bg {
+  background-color: var(--primary) !important;
 }
 
 /* HEADER */
@@ -55,21 +69,59 @@ footer {
 }
 
 /* LANDING PAGE */
+.landingPage-secondaryBg {
+  background-color: var(--primary);
+}
+
+/* DESTINATION SEARCH */
+.search-anchor {
+  color: var(--black);
+}
+
 .card-body {
   min-height: 300px;
   min-width: 300px;
   margin-right: 5px;
 }
 
+.search-anchor:hover {
+  color: var(--black);
+}
 
-/* LOGIN */
+/* DASHBOARD */
+.dashboard-card-bg {
+  background-color: var(--quatrinary) !important;
+}
 
+.dashboard-btn {
+  background-color: var(--primary) !important;
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
+}
 
-/* ABOUT US */
+.dashboard-btn:hover {
+  background-color: var(--secondary) !important;
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
+}
 
+.contact-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
-/* CONTACT US */
+/* ADD DESTINATION */
+.addDest-btn {
+  background-color: var(--tertiary) !important;
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
+}
 
+.addDest-btn:hover {
+  background-color: var(--quatrinary) !important;
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
+}
 
 /* MODAL */
 .modalTitle {
@@ -78,3 +130,10 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.modal-bg {
+  background: var(--primary) !important;
+}
+ .modal-title-bg {
+  background-color: var(--quatrinary);
+ }

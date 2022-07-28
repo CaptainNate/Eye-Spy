@@ -20,6 +20,8 @@ const Login = (props) => {
             ...formState,
             [name]: value,
         });
+
+        console.log(formState)
     };
 
     // submit form
@@ -33,7 +35,7 @@ const Login = (props) => {
 
             Auth.login(data.login.token);
         } catch (e) {
-            console.error(e);
+            console.error(e)
         }
 
         // clear form values
@@ -56,7 +58,7 @@ const Login = (props) => {
                 <form className="px-5 mx-5 col" onSubmit={handleFormSubmit} >
                     <div className="d-flex row">
                         <div>
-                            <h2 className="mb-5 pb-3 border-bottom border-dark text-center">Login</h2>
+                            <h1 className="mb-5 pb-3 border-bottom border-dark text-center header-font">Login</h1>
                         </div>
                         {/* input email */}
                         <div>

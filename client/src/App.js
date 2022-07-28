@@ -26,7 +26,6 @@ import AddDestination from "./pages/AddDestination";
 import SearchResults from "./components/SearchResults";
 import Dashboard from "./pages/Dashboard";
 
-// CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
