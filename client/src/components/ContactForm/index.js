@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { validateEmail } from "../../utils/auth";
+import { validateEmail } from "../../utils/Auth";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
