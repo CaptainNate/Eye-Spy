@@ -1,0 +1,15 @@
+{
+  "short_name": "Eye Spy",
+  "name": "Eye Spy",
+  "icons": [
+    {
+      "src": "../src/images/eye-spy-500x500.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "../index.html",
+  "display": "standalone",
+  "theme_color": "#FFF2BD",
+  "background_color": "#EF7F1B"
+}
