@@ -24,10 +24,10 @@ const Search = () => {
                         <div className="m-2">
                             <SearchBar />
                         </div>
-                        <div className="text-center">
+                        {/* <div className="text-center">
                             <button type="submit" className="all-btns p-2 rounded"><a href="../components/SearchResults" className="text-decoration-none search-anchor">Search</a>
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="px-5 mx-5">
