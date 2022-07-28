@@ -30,7 +30,7 @@ const Search = () => {
                         </div> */}
                     </div>
                 </div>
-                <div className="px-5 mx-5">
+                <div className="px-5 mx-5 d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block">
                     <div>
                         <img src={searchImg} alt="couple paddle boarding" style={{height:"600px"}} />
                     </div>

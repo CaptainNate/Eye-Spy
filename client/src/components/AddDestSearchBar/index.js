@@ -9,7 +9,7 @@ function AddDestSearchBar() {
                     Select an outdoor activity
                 </label> */}
                 <select name="activity" className="category-btn p-2 rounded" placeholder='Select an outdoor activity' style={{ width: "100%" }}>
-                    <option value="" className="text-center" disabled>Select an outdoor activity</option>
+                    <option value="" className="text-center" defaultValue={""}>Select an outdoor activity</option>
                     <option value="hiking" id="search-bar-hiking" className="text-center">Hiking Trails</option>
                     <option value="camping" id="search-bar-camping" className="text-center">Camping</option>
                     <option value="biking" id="search-bar-biking" className="text-center">Mountain Biking</option>

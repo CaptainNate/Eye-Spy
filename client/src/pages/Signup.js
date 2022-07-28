@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 
-import Auth from "../utils/auth";
+import Auth from "../utils/Auth";
 
 import loginImg from "../images/login-signup-img.png";
 
@@ -44,7 +44,11 @@ const SignUp = () => {
       <div className="d-flex justify-content-center align-items-center">
         <div className="px-5 mx-5">
           <div>
-            <img src={loginImg} alt="couple paddle boarding" />
+            <img
+              src={loginImg}
+              class="d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block"
+              alt="couple paddle boarding"
+            />
           </div>
         </div>
         {/* need to add following line to form once mutations are complete */}
@@ -110,6 +114,9 @@ const SignUp = () => {
               >
                 Sign Up
               </button>
+              <br></br>
+              <br></br>
+              <br></br>
             </div>
           </div>
         </form>

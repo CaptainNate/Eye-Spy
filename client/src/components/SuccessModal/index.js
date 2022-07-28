@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function AddDestModal(props) {
+function SuccessModal(props) {
 
     // add if/else to if destination created successfully, display this modal
     // if destination created unsuccessfully, display other modal
@@ -37,4 +37,4 @@ function AddDestModal(props) {
     )
 }
 
-export default AddDestModal;
+export default SuccessModal;
