@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // component imports
 import AddDestSearchBar from '../components/AddDestSearchBar';
 import SuccessModal from '../components/SuccessModal';
 
 // bootstrap imports
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 function AddDestination() {
-
     // useState variables for modals
     const [modalShow, setModalShow] = React.useState(false);
 
@@ -19,11 +18,11 @@ function AddDestination() {
     const loadFile = function (event) {
         const reader = new FileReader();
         reader.onload = function () {
-            const output = document.getElementById('output');
+            const output = document.getElementById("output");
             output.src = reader.result;
         };
         reader.readAsDataURL(event.target.files[0]);
-    }
+    };
 
     return (
         <div className="">
@@ -82,12 +81,73 @@ function AddDestination() {
                         </div>
                     </form>
                 </div>
-                < br />
-                < br />
-                < br />
+                <div className="col-5 p-4 m-2 rounded shadow-lg floating-box-bg">
+                    <div className="">
+                        <label htmlFor="validationTextarea" className="form-label">
+                            Description
+                        </label>
+                        <textarea
+                            className="form-control is-invalid"
+                            id="validationTextarea"
+                            placeholder="Please enter a brief description"
+                            name="description"
+                            type="text"
+                            rows="5"
+                            style={{ height: "100%" }}
+                            required
+                        ></textarea>
+                    </div>
+                </div>
+                <div className="col-5 m-2 rounded shadow-lg floating-box-bg">
+                    <div>
+                        <h4 className="text-center my-4 pb-3 border-bottom border-dark subHeader-font">
+                            Please Select A Category
+                        </h4>
+                        <AddDestSearchBar />
+                    </div>
+                </div>
+                {/* upload image */}
+                <div className="col-5 m-2 text-center rounded shadow-lg floating-box-bg">
+                    <h4 className="text-center my-4 pb-3 border-bottom border-dark subHeader-font">
+                        Upload A Photo
+                    </h4>
+                    <div className="text-center">
+                        <label htmlFor="file" className="File"></label>
+                        <input
+                            className="text-center"
+                            type="file"
+                            id="img-file"
+                            name="file"
+                            accept="image/*"
+                            required
+                            onChange={loadFile}
+                        />
+                        <div className="col-12">
+                            {/* warning bc react wants an alt in the img element (alt is not necessary) */}
+                            <img
+                                id="output"
+                                className="m-3 "
+                                style={{ height: "250px" }}
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Open Modal */}
+                <Button
+                    className="all-btns m-2 p-2 rounded text-center col-4"
+                    onClick={() => setModalShow(true)}
+                >
+                    Add Destination
+                </Button>
+                <SuccessModal
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                ></SuccessModal>
             </div>
         </div>
-    )
+    );
 }
 
 export default AddDestination;
