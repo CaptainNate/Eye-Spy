@@ -114,6 +114,9 @@ const SignUp = () => {
               >
                 Sign Up
               </button>
+              <br></br>
+              <br></br>
+              <br></br>
             </div>
           </div>
         </form>
