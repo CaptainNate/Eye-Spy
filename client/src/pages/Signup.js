@@ -1,50 +1,43 @@
 import React, { useState } from 'react';
-// import { useMutation } from '@apollo/client';
-// import { ADD_USER } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../utils/mutations';
 
-// import Auth from '../utils/auth';
+import Auth from '../utils/Auth';
 
 import loginImg from "../images/login-signup-img.png";
 
 const SignUp = () => {
-    // const [formState, setFormState] = useState({
-    //     username: "",
-    //     email: "",
-    //     password: "",
-    // });
-    // const [addUser, { error }] = useMutation(ADD_USER);
+    const [formState, setFormState] = useState({
+        username: "",
+        email: "",
+        password: "",
+    });
+    const [addUser, { error }] = useMutation(ADD_USER);
 
-    // const [formState, setFormState] = useState({
-    //     username: '',
-    //     email: '',
-    //     password: '',
-    // });
-    // const [addUser, { error }] = useMutation(ADD_USER);
+    // update state based on form input changes
+    const handleChange = (event) => {
+        const { name, value } = event.target;
 
-    // // update state based on form input changes
-    // const handleChange = (event) => {
-    //     const { name, value } = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    };
 
-    //     setFormState({
-    //         ...formState,
-    //         [name]: value,
-    //     });
-    // };
+    // submit form
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
 
-    // // submit form
-    // const handleFormSubmit = async (event) => {
-    //     event.preventDefault();
+        try {
+            const { data } = await addUser({
+                variables: { ...formState },
+            });
 
-    //     try {
-    //         const { data } = await addUser({
-    //             variables: { ...formState },
-    //         });
-
-    //         Auth.login(data.addUser.token);
-    //     } catch (e) {
-    //         console.error(e);
-    //     }
-    // };
+            Auth.login(data.addUser.token);
+        } catch (e) {
+            console.error(e);
+        }
+    };
 
     return (
         <main className="container p-5 mb-5">
@@ -56,10 +49,23 @@ const SignUp = () => {
                 </div>
                 {/* need to add following line to form once mutations are complete */}
                 {/* onSubmit={handleFormSubmit} */}
-                <form className="px-5 mx-5 col">
+                <form className="px-5 mx-5 col" onSubmit={handleFormSubmit}>
                     <div className="d-flex row">
                         <div>
-                            <h2 className="mb-5 pb-3 border-bottom border-dark text-center">Sign Up Today!</h2>
+                            <h1 className="mb-5 pb-3 border-bottom border-dark text-center header-font">Sign Up Today!</h1>
+                        </div>
+                        {/* input username */}
+                        <div>
+                            <label htmlFor='username' className="form-label pe-3">Username</label>
+                            <input
+                                className="form-control p-1 mb-4"
+                                placeholder="Your username"
+                                name="username"
+                                type="text"
+                                id="username"
+                                value={formState.username}
+                                onChange={handleChange}
+                            />
                         </div>
                         {/* input email */}
                         <div>
@@ -70,8 +76,8 @@ const SignUp = () => {
                                 name="email"
                                 type="email"
                                 id="email"
-                            // value={formState.email}
-                            // onChange={handleChange}
+                                value={formState.email}
+                                onChange={handleChange}
                             />
                         </div>
                         {/* input password */}
@@ -83,8 +89,8 @@ const SignUp = () => {
                                 name="password"
                                 type="password"
                                 id="password"
-                            // value={formState.password}
-                            // onChange={handleChange}
+                                value={formState.password}
+                                onChange={handleChange}
                             />
                         </div>
                         {/* submit login data */}
@@ -96,7 +102,7 @@ const SignUp = () => {
                     </div>
                 </form>
                 {/* catch signup error */}
-                {/* {error && <div>Signup failed</div>} */}
+                {error && <div>Signup failed</div>}
             </div>
         </main>
     );

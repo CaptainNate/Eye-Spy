@@ -37,10 +37,6 @@ const AboutUs = () => {
               Questions? Contact Us!
             </a>
           </div>
-
-          {/* <div class="d-grid gap-2 d-md-flex justify-content-md-end btn-primary btn-lg">
-                    <a class="btn btn-primary" href="/activity-search" role="button">Start Searching!</a>
-                    </div> */}
         </div>
       </div>
     </div>

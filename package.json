@@ -17,6 +17,6 @@
         "concurrently": "^5.1.0"
     },
     "dependencies": {
-        "workbox-precaching": "^6.5.4"
+        "apollo-client": "^2.6.10"
     }
 }
