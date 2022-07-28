@@ -23,7 +23,9 @@ const typeDefs = gql`
     location: String
     like_count: Int
     hate_count: Int
+    category: String
     comments: [Comment]
+    img: String
   }
 
   type Comment {
@@ -49,7 +51,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    newPost(post_title: String!, post_text: String!, img: String): Post
+    newPost(post_title: String!, post_text: String!, img: String!): Post
     newComment(PostId: ID!, comment_text: String!): Post
   }
 `;
