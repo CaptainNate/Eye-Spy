@@ -1,14 +1,36 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const { webpack } = require('webpack');
 const {InjectManifest} = require('workbox-webpack-plugin');
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
     context: __dirname,
-    entry: './src/index.js',
+    mode: 'development',
+    entry: {
+        index: {
+            import:'./src/index.js',
+            dependOn: 'shared',
+        },
+        css: {
+            import:'./src/index.css',
+            dependOn: 'shared',
+        },
+        shared: 'lodash',
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.bundle.js',
+        filename: '[name].bundle.js',
         publicPath: '/',
+    },
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                react: { test: /[\\/]node_modules[\\/]((react).*)[\\/]/, name: "react", chunks: "all"},
+                //commons: { test: /[\\/]node_modules[\\/]/, name: "common", chunks: "all" }
+            }
+        }
     },
     devServer: {
         historyApiFallback: true,
@@ -37,6 +59,9 @@ module.exports = {
     new InjectManifest({
         swSrc: './src/service-worker.js',
         swDest: 'service-worker.js'
+    }),
+    new BundleAnalyzerPlugin({
+        analyzerMode: "static"
     })
 ],
 };
