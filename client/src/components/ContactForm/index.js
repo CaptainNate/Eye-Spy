@@ -49,7 +49,7 @@ function ContactForm() {
   // adds error messages to the form
   function handleChange(e) {
     if (e.target.name === "email") {
-      const isValid = validateEmail(e.target.value);
+      const isValid =  validateEmail(e.target.value);
       if (!isValid) {
         setFormMessage("Your email is invalid.");
       } else {
