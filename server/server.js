@@ -55,9 +55,10 @@ const startApolloServer = async (typeDefs, resolvers) => {
 const upload = multer({ dest: "uploads" })
 
 app.post("/upload", upload.single("file"), async (req, res, next) => {
+  console.log("CHUPA MUNDO: ", req.body)
   const fileData = {
-    title: req.body.title,
-    description: req.body.description,
+    post_title: req.body.post_title,
+    post_text: req.body.post_text,
     img: {
       data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
       contentType: 'image/png'

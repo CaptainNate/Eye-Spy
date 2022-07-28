@@ -31,7 +31,10 @@ const PostSchema = new Schema(
       required: false,
       unique: true,
     },
-    // TO-DO: add image logic
+    img: {
+      type: Schema.Types.ObjectId,
+      ref: "File",
+    },
     username: {
       type: String,
       required: true,
