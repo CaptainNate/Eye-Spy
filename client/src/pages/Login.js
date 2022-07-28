@@ -61,7 +61,11 @@ const Login = (props) => {
       <div className="d-flex justify-content-center align-items-center">
         <div className="px-5 mx-5">
           <div>
-            <img src={loginImg} alt="couple paddle boarding" />
+            <img
+              src={loginImg}
+              class="d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block"
+              alt="couple paddle boarding"
+            />
           </div>
         </div>
         {/* will need to add the following line in the form */}
