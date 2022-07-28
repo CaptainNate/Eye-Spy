@@ -44,7 +44,11 @@ const SignUp = () => {
       <div className="d-flex justify-content-center align-items-center">
         <div className="px-5 mx-5">
           <div>
-            <img src={loginImg} alt="couple paddle boarding" />
+            <img
+              src={loginImg}
+              class="d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block"
+              alt="couple paddle boarding"
+            />
           </div>
         </div>
         {/* need to add following line to form once mutations are complete */}
