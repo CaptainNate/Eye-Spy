@@ -123,6 +123,12 @@ footer {
   color: var(--black) !important;
 }
 
+.category-btn {
+  background-color: var(--quatrinary) !important;
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
+}
+
 /* MODAL */
 .modalTitle {
   position: absolute;

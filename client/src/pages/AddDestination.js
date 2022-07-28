@@ -1,7 +1,16 @@
-import React from 'react';
-import SearchBar from '../components/SearchBar';
+import React, { useState } from 'react';
+
+// component imports
+import AddDestSearchBar from '../components/AddDestSearchBar';
+import AddDestModal from '../components/SuccessModal';
+
+// bootstrap imports
+import Button from 'react-bootstrap/Button';
 
 function AddDestination() {
+
+    // useState variables for modals
+    const [modalShow, setModalShow] = React.useState(false);
 
     // add a conditional statement so that all items in add-destination can be saved on click
     // create a formhandler?
@@ -45,7 +54,7 @@ function AddDestination() {
                                 <div className="col-5 m-2 rounded shadow-lg floating-box-bg">
                                     <div>
                                         <h4 className="text-center my-4 pb-3 border-bottom border-dark subHeader-font">Please Select A Category</h4>
-                                        <SearchBar />
+                                        <AddDestSearchBar />
                                     </div>
                                 </div>
                                 {/* upload image */}
@@ -56,21 +65,26 @@ function AddDestination() {
                                         <input className="text-center" type="file" id="img-file" name="file" accept="image/*" required onChange={loadFile} />
                                         <div className="col-12">
                                             {/* warning bc react wants an alt in the img element (alt is not necessary) */}
-                                            <img id="output" className="m-3 " style={{ height: "250px" }} />
+                                            <img id="output" className="m-3 " style={{ height: "250px" }} alt="..." />
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="col-12 text-center mt-4">
-                                    <button className="addDest-btn p-2 rounded" type="submit">Add Destination</button>
-                                </div>
+                                {/* Open Modal */}
+                                <Button className="all-btns m-2 p-2 rounded text-center col-4" onClick={() => setModalShow(true)}>
+                                    Add Destination
+                                </Button>
+                                <AddDestModal
+                                    show={modalShow}
+                                    onHide={() => setModalShow(false)}
+                                ></AddDestModal>
                             </div>
                         </div>
                     </form>
                 </div>
-            < br />
-            < br />
-            < br />
+                < br />
+                < br />
+                < br />
             </div>
         </div>
     )

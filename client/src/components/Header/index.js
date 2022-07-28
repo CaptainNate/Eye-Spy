@@ -35,8 +35,8 @@ function Header() {
                                 <>
                                     <Nav.Link href="/dashboard" className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end">My Dashboard</Nav.Link>
                                     <Nav.Link href='/add-destination' className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end">Add A Destination</Nav.Link>
-                                    <Nav.Link href='/destinations' className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end">View All Destinations</Nav.Link>
-                                    <a href="/" onClick={logout}>
+                                    {/* <Nav.Link href='/search-results' className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end">View All Destinations</Nav.Link> */}
+                                    <a href="/dashboard" className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end" onClick={logout}>
                                         Logout
                                     </a>
                                 </>

@@ -8,6 +8,12 @@ import Auth from '../utils/Auth';
 // image import
 import loginImg from '../images/login-signup-img.png';
 
+// component imports
+import FailModal from '../components/FailModal';
+
+// bootstrap imports
+// import Button from 'react-bootstrap/Button';
+
 const Login = (props) => {
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN_USER);
@@ -44,6 +50,12 @@ const Login = (props) => {
             password: '',
         });
     };
+
+
+    // ADD IN --> IF LOGIN FAILED, FAIL MODAL POPS UP
+    
+    // useState variables for modals
+    // const [modalShow, setModalShow] = React.useState(false);
 
     return (
         <main className="container p-5 mb-5">
@@ -96,7 +108,7 @@ const Login = (props) => {
                 </form>
 
                 {/* catch login error */}
-                {error && <div>Login failed</div>}
+                {error && <div>login failed</div>}
             </div>
         </main>
     )
