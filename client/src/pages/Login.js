@@ -3,7 +3,7 @@ import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
 // authentication import
-import Auth from "../utils/auth";
+import Auth from "../utils/Auth";
 
 // image import
 import loginImg from "../images/login-signup-img.png";
