@@ -9,7 +9,7 @@ import Auth from '../utils/Auth';
 import loginImg from '../images/login-signup-img.png';
 
 // component imports
-import FailModal from '../components/FailModal';
+// import FailModal from '../components/FailModal';
 
 // bootstrap imports
 // import Button from 'react-bootstrap/Button';
