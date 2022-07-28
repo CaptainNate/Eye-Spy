@@ -6,7 +6,8 @@ import {
   ApolloClient,
   InMemoryCache,
   createHttpLink,
-} from "@apollo/client";
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
 // bootstrap styling
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,13 +27,22 @@ import AddDestination from "./pages/AddDestination";
 import SearchResults from "./components/SearchResults";
 import Dashboard from "./pages/Dashboard";
 
-// CONNECTION TO BACKEND SERVERS
 const httpLink = createHttpLink({
-  uri: "http://localhost:3000",
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
 });
 
 const client = new ApolloClient({
-  link: httpLink,
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 

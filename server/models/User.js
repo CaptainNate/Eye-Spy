@@ -1,4 +1,6 @@
 const { Schema, model } = require("mongoose");
+const dateFormat = require("../utils/dateFormat");
+const bcrypt = require('bcrypt');
 
 const UserSchema = new Schema(
   {
@@ -55,6 +57,11 @@ const UserSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (createdAt) => dateFormat(createdAt),
+    },
   },
   {
     toJSON: {
@@ -62,6 +69,16 @@ const UserSchema = new Schema(
     },
   }
 );
+
+// set up pre-save middleware to create password
+UserSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+
+  next();
+});
 
 // returns the number of comments a user has
 UserSchema.virtual("commentsCount").get(function () {
@@ -87,6 +104,11 @@ UserSchema.virtual("favoritesCount").get(function () {
 UserSchema.virtual("postsCount").get(function () {
   return this.posts.length;
 });
+
+// compare the incoming password with the hashed password
+UserSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
 
 const User = model("User", UserSchema);
 
