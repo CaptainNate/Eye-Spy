@@ -3,6 +3,11 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const { authMiddleware } = require('./utils/auth');
 const path = require('path');
+const fs = require('fs');
+const multer = require("multer")
+const File = require("./models/File")
+
+
 
 
 // import our typeDefs and resolvers
@@ -46,6 +51,36 @@ const startApolloServer = async (typeDefs, resolvers) => {
     })
   })
 };
+
+const upload = multer({ dest: "uploads" })
+
+app.post("/upload", upload.single("file"), async (req, res, next) => {
+  const fileData = {
+    title: req.body.title,
+    description: req.body.description,
+    img: {
+      data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+      contentType: 'image/png'
+    }
+    // path: req.file.path,
+    // originalName: req.file.originalname,
+  }
+
+  File.create(fileData, (err, item) => {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      // item.save();
+      res.redirect('/');
+    }
+    // const file = await File.create(fileData)
+
+    // res.render("index")
+  });
+});
+
+
 
 // Call the async function to start the server
 startApolloServer(typeDefs, resolvers);
