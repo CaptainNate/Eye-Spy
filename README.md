@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Eye Spy
+### Your Guide to the Outside's Hidden Gems
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Eye-Spy-logo](./client/src/images/eye-spy-500x500.png)
 
-## Available Scripts
+## Table of Contents
+1. [Description](#description)
+2. [Motivation](#motivation)
+3. [Challenges](#challenges)
+4. [Technologies Applied](#technologies)
+5. [Future Development](#future)
+6. [Documentation](#documentation)
+7. [Contributors] (#contributors)
+8. [Links](#links)
 
-In the project directory, you can run:
+## Description
+Love going outside but hate a crowd?  Then this is your app.  Search the other user's posts to find the perfect spot for your next outing. Sign up and you can share cool new places you've found with others.  If you try a location and like what you see, you share your experience in the comments, and upvote the location.  If you found the location has gotten too much attention and is getting crowded, hit the `too crowded` button.  If too many people feel a place has become too crowded it gets dropped from our site.
 
-### `npm start`
+## Motivation
+One of our team members thought it would be cool to have an app that let you find good places to bicycle or go for a hike that weren't too crowded.  With that, we came up with the idea of a crowd sourced database that automatically dropped locations once they'd become too crowded.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Challenges
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Applied
+*
 
-### `npm test`
+## Future Development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Documentation
 
-### `npm run build`
+## Contributors
+* Nathaniel Chan **[nchan22](https://github.com/nchan22)**
+* Maggie Joseph, Github: **[maggiejoe](https://github.com/maggiejoe)**
+* Leandro Michelena, Github: **[leandromichelena](https://github.com/leandromichelena)**
+* Luiz Medina, Github: **[luizmedina87](https://github.com/luizmedina87)**
+* Fernando Almeida, Github **[flalmeida3105](https://github.com/flalmeida3105)**
+* Eric Smith, Github **[frodrickfronkenstein](https://github.com/frodrickfronkenstein)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Links
+* **[Repository](https://github.com/CaptainNate/eye-spy)**
+* **[Heroku Live App]()**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
