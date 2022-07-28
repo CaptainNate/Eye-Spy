@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // component imports
 import AddDestSearchBar from '../components/AddDestSearchBar';
-import AddDestModal from '../components/SuccessModal';
+import SuccessModal from '../components/SuccessModal';
 
 // bootstrap imports
 import Button from 'react-bootstrap/Button';
@@ -26,13 +26,13 @@ function AddDestination() {
     }
 
     return (
-        <div>
+        <div className="">
             <div className="container p-5 mb-5">
-                <div className="">
+                <div className="row">
                     <div>
                         <h1 className="text-center mb-5 pb-3 border-bottom border-dark header-font">Add Destination</h1>
                     </div>
-                    <form className="container d-flex justify-content-center">
+                    <form className="container d-flex flex-wrap justify-content-center">
                         <div className="">
                             <div className="row justify-content-center">
                                 <div className="col-5 p-4 m-2 rounded shadow-lg floating-box-bg">
@@ -74,10 +74,10 @@ function AddDestination() {
                                 <Button className="all-btns m-2 p-2 rounded text-center col-4" onClick={() => setModalShow(true)}>
                                     Add Destination
                                 </Button>
-                                <AddDestModal
+                                <SuccessModal
                                     show={modalShow}
                                     onHide={() => setModalShow(false)}
-                                ></AddDestModal>
+                                ></SuccessModal>
                             </div>
                         </div>
                     </form>

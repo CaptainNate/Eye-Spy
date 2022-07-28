@@ -16,7 +16,7 @@ function Contact() {
       <Container fluid className="shadow-lg mb-5 floating-box-bg rounded">
         <Container className="p-4">
           <Row>
-            <Col>
+            <Col sm={12} md={12} lg={8}>
               <Container>
                 <h4 className="subHeader-font mb-3 pb-3 border-bottom border-dark">Contact Info</h4>
                 <div className="">
@@ -30,7 +30,7 @@ function Contact() {
               </Container>
             </Col>
 
-            <Col sm={12} md={6} lg={8} className="pt-sm-4 pt-lg-0">
+            <Col sm={12} md={12} lg={8} className="pt-sm-4 pt-lg-0">
               <Container>
                 <h4 className="subHeader-font mb-3 pb-3 border-bottom border-dark">Send a Message</h4>
                 <ContactForm />

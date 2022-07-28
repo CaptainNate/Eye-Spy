@@ -70,8 +70,15 @@ footer {
 
 /* LANDING PAGE */
 .landingPage-secondaryBg {
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
 }
+
+.landingPage-tertiaryBg {
+  background-color: var(--quatrinary) !important;
+}
+
+/* media queries for landing page */
+
 
 /* DESTINATION SEARCH */
 .search-anchor {

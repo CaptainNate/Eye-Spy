@@ -38,11 +38,6 @@ function Dashboard(props) {
             <div className="m-2">
               <SearchBar />
             </div>
-            <div className="text-center">
-              <button type="submit" className="all-btns p-2 rounded">
-                Search
-              </button>
-            </div>
           </div>
         </div>
       </div>
