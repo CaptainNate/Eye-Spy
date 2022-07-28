@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 
-import Auth from "../utils/Auth";
+import Auth from "../utils/auth";
 
 import loginImg from "../images/login-signup-img.png";
 
@@ -47,12 +47,29 @@ const SignUp = () => {
             <img src={loginImg} alt="couple paddle boarding" />
           </div>
         </div>
-        <form onSubmit={handleFormSubmit} className="px-5 mx-5 col">
+        {/* need to add following line to form once mutations are complete */}
+        {/* onSubmit={handleFormSubmit} */}
+        <form className="px-5 mx-5 col" onSubmit={handleFormSubmit}>
           <div className="d-flex row">
             <div>
-              <h2 className="mb-5 pb-3 border-bottom border-dark text-center">
+              <h1 className="mb-5 pb-3 border-bottom border-dark text-center header-font">
                 Sign Up Today!
-              </h2>
+              </h1>
+            </div>
+            {/* input username */}
+            <div>
+              <label htmlFor="username" className="form-label pe-3">
+                Username
+              </label>
+              <input
+                className="form-control p-1 mb-4"
+                placeholder="Your username"
+                name="username"
+                type="text"
+                id="username"
+                value={formState.username}
+                onChange={handleChange}
+              />
             </div>
             {/* input email */}
             <div>

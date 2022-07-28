@@ -1,0 +1,12 @@
+[
+  {
+    "username":"John",
+    "email":"john@gmail.com",
+    "password":"12345",
+    "posts":[],
+    "likes":[],
+    "hates":[],
+    "favorites":[],
+    "comments":[]
+  }
+]

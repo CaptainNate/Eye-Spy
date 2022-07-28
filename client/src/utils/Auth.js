@@ -38,6 +38,7 @@ class AuthService {
     // Saves user token to localStorage
     localStorage.setItem("id_token", idToken);
 
+    // change this to dashboard once dashboard page is created
     window.location.assign("/");
   }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { validateEmail } from "../../utils/Auth";
+import { validateEmail } from "../../utils/auth";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -104,9 +104,9 @@ function ContactForm() {
 
   return (
     // name section
-    <Form onSubmit={sendEmail} id="contactForm">
+    <Form onSubmit={sendEmail} id="contactForm" className="floating-box-bg">
       <Form.Group controlId="name">
-        <Form.Label>Your Name</Form.Label>
+        <Form.Label className="contact-title">Your Name</Form.Label>
         <Form.Control
           required
           name="name"
@@ -117,7 +117,7 @@ function ContactForm() {
 
       {/* email section */}
       <Form.Group controlId="email">
-        <Form.Label>Your Email</Form.Label>
+        <Form.Label className="contact-title">Your Email</Form.Label>
         <Form.Control
           required
           name="email"
@@ -129,7 +129,7 @@ function ContactForm() {
 
       {/* subject section */}
       <Form.Group controlId="subject">
-        <Form.Label>Subject</Form.Label>
+        <Form.Label className="contact-title">Subject</Form.Label>
         <Form.Control
           required
           name="subject"
@@ -140,7 +140,7 @@ function ContactForm() {
 
       {/* message section */}
       <Form.Group controlId="message">
-        <Form.Label>Message</Form.Label>
+        <Form.Label className="contact-title">Message</Form.Label>
         <Form.Control
           required
           name="message"
@@ -152,8 +152,8 @@ function ContactForm() {
       </Form.Group>
 
       {formMessage && <p className="form-message">{formMessage}</p>}
-
-      <Button type="submit" className="btn">
+      <br></br>
+      <Button type="submit" className="all-btns p-2 rounded">
         Submit
       </Button>
     </Form>
