@@ -15,6 +15,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Contact from "./components/ContactUs";
+import MeetUs from "./components/MeetUs";
 
 // page imports
 import LandingPage from "./pages/LandingPage";
@@ -64,6 +65,7 @@ function App() {
               <Route exact path="/add-destination" element={<AddDestination />} />
               <Route exact path="/search-results" element={<SearchResults />} />
               <Route exact path="/dashboard" element={<Dashboard />} />
+              <Route exact path="meet-us" element={<MeetUs />} />
             </Routes>
           </div>
           <Footer />
