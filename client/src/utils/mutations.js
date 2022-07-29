@@ -25,3 +25,19 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const NEW_POST = gql`
+  mutation newPost($post_title: String!, $post_text: String!, $category: String, $img: String) {
+    post(post_title: $post_title, post_text: $post_text, category: $category, img: $img) {
+      post {
+        _id
+        img
+        post_title
+        category
+        post_text
+        location
+        createdAt
+      }
+    }
+  }
+`

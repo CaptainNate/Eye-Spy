@@ -24,7 +24,7 @@ function Dashboard(props) {
       <div className="d-flex row justify-content-center text-center">
         <div className="col-5 p-4 m-2 shadow-lg floating-box-bg">
           <div className="text-center">
-            <h2 className='mb-4 pb-3 border-bottom border-dark header-font'>Welcome, User's Name</h2>
+            <h2 className='mb-4 pb-3 border-bottom border-dark header-font'>Welcome to Your Dashboard!</h2>
             <p>Here you'll find the favorited locations you saved and find more new adventures!</p>
           </div>
         </div>
@@ -46,7 +46,7 @@ function Dashboard(props) {
         <div className="col-10 p-4 m-2 shadow-lg floating-box-bg">
 
           <div>
-            <h2 className="text-center mb-5 pb-3 border-bottom border-dark header-font">User Name's Favorite Places</h2>
+            <h2 className="text-center mb-5 pb-3 border-bottom border-dark header-font">Your Favorite Places</h2>
           </div>
           {/* Card Layout */}
           <div className="card col-4 p-3 dashboard-card-bg">

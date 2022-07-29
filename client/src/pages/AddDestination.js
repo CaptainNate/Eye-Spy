@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// import { useMutations } from "@apollo/client"
+// import {} from '../utils/mutations'
 
 // component imports
 import AddDestSearchBar from '../components/AddDestSearchBar';
@@ -6,6 +8,7 @@ import SuccessModal from '../components/SuccessModal';
 
 // bootstrap imports
 import Button from "react-bootstrap/Button";
+// import Auth from "../utils/Auth";
 
 function AddDestination() {
     // useState variables for modals
@@ -13,6 +16,39 @@ function AddDestination() {
 
     // add a conditional statement so that all items in add-destination can be saved on click
     // create a formhandler?
+    // const [formState, setFormState] = useState({ });
+    // const [ saveDestination, { error }] = useMutation();
+
+      // update state based on form input changes
+    // const handleChange = (event) => {
+    //     const { name, value } = event.target;
+
+    //     setFormState({
+    //         ...formState,
+    //         [name]: value,
+    //     });
+    //     console.log(formState);
+    // }
+
+    // submit form
+    // const handleFormSubmit = async (event) => {
+    //     event.preventDefault();
+
+    //     try {
+    //         const { data } = await saveDestination({
+    //             variable: { ...formState },
+    //         });
+            
+    //         Auth.login(data.login.token);
+    //     } catch (e) {
+    //         console.error(e);
+    //     }
+
+        // clear from values
+        // setFormState({
+
+        // });
+    // }
 
     // Image Preview
     const loadFile = function (event) {

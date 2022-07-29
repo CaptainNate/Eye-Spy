@@ -18,8 +18,7 @@ const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN_USER);
 
-  // update state based on form input changes
-  const handleChange = (event) => {
+const handleChange = (event) => {
     const { name, value } = event.target;
 
     setFormState({

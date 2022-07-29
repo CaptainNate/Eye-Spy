@@ -47,9 +47,15 @@ function Header() {
                   >
                     Add A Destination
                   </Nav.Link>
+                  <Nav.Link
+                    href="/activity-search"
+                    className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
+                  >
+                    Destination Search
+                  </Nav.Link>
                   {/* <Nav.Link href='/search-results' className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end">View All Destinations</Nav.Link> */}
                   <a
-                    href="/dashboard"
+                    href="/"
                     className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
                     onClick={logout}
                   >
@@ -71,12 +77,6 @@ function Header() {
                     Sign Up
                   </Nav.Link>
                   <Nav.Link
-                    href="/activity-search"
-                    className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
-                  >
-                    Destination Search
-                  </Nav.Link>
-                  <Nav.Link
                     href="/about-us"
                     className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
                   >
@@ -87,28 +87,6 @@ function Header() {
                     className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
                   >
                     Contact Us
-                  </Nav.Link>
-
-                  {/* this must be taken out once the login auth is functioning on the backend */}
-                  <Nav.Link
-                    href="/add-destination"
-                    className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
-                  >
-                    Add Destination
-                  </Nav.Link>
-                  <Nav.Link
-                    href="/dashboard"
-                    className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
-                  >
-                    Dashboard
-                  </Nav.Link>
-
-                  {/* search results will only display when the submit button is clicked in the SearchBar */}
-                  <Nav.Link
-                    href="/search-results"
-                    className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
-                  >
-                    Search Results
                   </Nav.Link>
                 </>
               )}
