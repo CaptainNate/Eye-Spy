@@ -24,7 +24,13 @@ function Header() {
         <Container className="d-flex">
           <Navbar.Brand href="/">
             <Link to="/">
-              <img src={logo} alt="Eye Spy Logo" height={175} width={175}></img>
+              <img
+                src={logo}
+                // class="d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block"
+                alt="Eye Spy Logo"
+                height={175}
+                width={175}
+              ></img>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
