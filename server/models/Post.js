@@ -29,7 +29,7 @@ const PostSchema = new Schema(
     location: {
       type: String,
       required: false,
-      unique: true,
+      unique: false,
     },
     img: {
       type: Schema.Types.ObjectId,

@@ -33,9 +33,9 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../client/build/index.html'));
+// });
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
@@ -80,6 +80,34 @@ app.post("/upload", upload.single("file"), async (req, res, next) => {
     // res.render("index")
   });
 });
+
+app.get('/image/:id', ({ params }, res) => {
+  console.log(res.params)
+  File.findOne({ _id: params.id })
+    .select('-__v')
+    .then(dbImage => {
+      console.log(dbImage)
+      if (!dbImage) {
+        res.status(404).json({ message: 'No image found with this id!' });
+        return;
+      }
+      var encodedBuffer = dbImage.img.data.toString('base64');
+      // console.log(dbImage)
+      const mimeType = 'image/png'; // e.g., image/png
+      res.send(`
+                <div class="container">
+                    <h1>${dbImage.title}</h1><br>
+                    <h3>${dbImage.description}</h3><br>
+                    <img src="data:${mimeType};base64,${encodedBuffer}" style="width:400px;height:auto;" />
+                </div>
+                `)
+
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(400).json(err);
+    });
+})
 
 
 
