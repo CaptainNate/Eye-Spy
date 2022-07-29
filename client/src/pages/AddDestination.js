@@ -1,55 +1,70 @@
 import React, { useState } from "react";
+
 import { useMutation } from "@apollo/client"
 import { NEW_POST } from '../utils/mutations'
+import { QUERY_POSTS } from "../utils/queries";
+
 
 // component imports
-// import AddDestSearchBar from '../components/AddDestSearchBar';
 import SuccessModal from '../components/SuccessModal';
 
 // bootstrap imports
 import Button from "react-bootstrap/Button";
-import Auth from "../utils/Auth";
+// import Auth from "../utils/Auth";
 
 function AddDestination() {
-    // useState variables for modals
-    const [modalShow, setModalShow] = React.useState(false);
 
-    // add a conditional statement so that all items in add-destination can be saved on click
-    // create a formhandler?
-    const [formState, setFormState] = useState({ img: "", post_title: "", category: "", post_text: "", location: "" });
-    const [saveDestination, { error }] = useMutation(NEW_POST);
+    const [postTitle, setPostTitle] = useState('');
+    const [postText, setPostText] = useState('');
+    const [postLocation, setPostLocation] = useState('');
+    const [postCategory, setPostCategory] = useState('');
+    const [postImg, setPostImg] = useState('');
 
-    //   update state based on form input changes
+
+    const [addPost, { error }] = useMutation(NEW_POST, {
+        update(cache, { data: { addPost } }) {
+            try {
+                const { posts } = cache.readQuery({ query: QUERY_POSTS });
+                cache.writeQuery({
+                    query: QUERY_POSTS,
+                    data: { posts: [addPost, ...posts] },
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        },
+    });
+
     const handleChange = (event) => {
-        const { name, value } = event.target;
+        if (event.target.value.length > 0) {
+            setPostText(event.target.value);
+            setPostTitle(event.target.value);
+            setPostLocation(event.target.value);
+            setPostCategory(event.target.value);
+            setPostImg(event.target.value);
+        }
+    };
 
-        setFormState({
-            ...formState,
-            [name]: value,
-        });
-        console.log(formState);
-    }
-
-    // submit form
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const { data } = await saveDestination({
-                variable: { ...formState },
+            await addPost({
+                variables: { postTitle, postText, postLocation, postCategory, postImg },
             });
 
-            Auth.login(data.login.token);
-            console.log("success")
+            setPostText('');
+            setPostTitle('');
+            setPostLocation('');
+            setPostCategory('');
+            setPostImg('');
         } catch (e) {
             console.error(e);
         }
+    };
 
-        // clear from values
-        setFormState({
-
-        });
-    }
+    // useState variables for modals
+    const [modalShow, setModalShow] = React.useState(false);
 
     // Image Preview
     const loadFile = function (event) {
@@ -74,17 +89,17 @@ function AddDestination() {
                                 <div className="col-5 p-4 m-2 rounded shadow-lg floating-box-bg">
                                     <div className="pb-2">
                                         <label className="form-label">Title</label>
-                                        <input id="destination-title" className="form-control" placeholder="Title" name="title" type="text" onChange={handleChange} value={formState.post_title}></input>
+                                        <input id="destination-title" className="form-control" placeholder="Title" name="title" type="text" onChange={handleChange} value={postTitle}></input>
                                     </div>
                                     <div className="">
                                         <label className="form-label">Address</label>
-                                        <input id="destination-address" className="form-control" placeholder="Address" name="address" type="text" onChange={handleChange} value={formState.location}></input>
+                                        <input id="destination-address" className="form-control" placeholder="Address" name="address" type="text" onChange={handleChange} value={postLocation}></input>
                                     </div>
                                 </div>
                                 <div className="col-5 p-4 m-2 rounded shadow-lg floating-box-bg">
                                     <div className="">
                                         <label htmlFor="validationTextarea" className="form-label">Description</label>
-                                        <textarea className="form-control is-invalid" id="validationTextarea" placeholder="Please enter a brief description" name="description" type="text" rows="5" style={{ height: "100%" }} required onChange={handleChange} value={formState.post_text}></textarea>
+                                        <textarea className="form-control is-invalid" id="validationTextarea" placeholder="Please enter a brief description" name="description" type="text" rows="5" style={{ height: "100%" }} required onChange={handleChange} value={postText}></textarea>
                                     </div>
                                 </div>
                                 <div className="col-5 m-2 rounded shadow-lg floating-box-bg">
@@ -94,11 +109,11 @@ function AddDestination() {
                                             <div className="text-center">
                                                 <select name="activity" className="category-btn p-2 rounded" placeholder='Select an outdoor activity' style={{ width: "100%" }}>
                                                     <option value="" className="text-center" defaultValue={""}>Select an outdoor activity</option>
-                                                    <option value={formState.category} onChange={handleChange} id="search-bar-hiking" className="text-center">Hiking Trails</option>
-                                                    <option value={formState.category} onChange={handleChange} id="search-bar-camping" className="text-center">Camping</option>
-                                                    <option value={formState.category} onChange={handleChange} id="search-bar-biking" className="text-center">Mountain Biking</option>
-                                                    <option value={formState.category} onChange={handleChange} id="search-bar-swimming" className="text-center">Swimming</option>
-                                                    <option value={formState.category} onChange={handleChange} id="search-bar-water-sport" className="text-center">Water Sports</option>
+                                                    <option value={postCategory} onChange={handleChange} id="search-bar-hiking" className="text-center">Hiking Trails</option>
+                                                    <option value={postCategory} onChange={handleChange} id="search-bar-camping" className="text-center">Camping</option>
+                                                    <option value={postCategory} onChange={handleChange} id="search-bar-biking" className="text-center">Mountain Biking</option>
+                                                    <option value={postCategory} onChange={handleChange} id="search-bar-swimming" className="text-center">Swimming</option>
+                                                    <option value={postCategory} onChange={handleChange} id="search-bar-water-sport" className="text-center">Water Sports</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -112,7 +127,7 @@ function AddDestination() {
                                         <input className="text-center" type="file" id="img-file" name="file" accept="image/*" required onChange={loadFile} />
                                         <div className="col-12">
                                             {/* warning bc react wants an alt in the img element (alt is not necessary) */}
-                                            <img id="output" className="m-3 " style={{ height: "250px" }} alt="..." value={formState.img} onChange={handleChange} />
+                                            <img id="output" className="m-3 " style={{ height: "250px" }} alt="..." value={postImg} onChange={handleChange} />
                                         </div>
                                     </div>
                                 </div>
@@ -132,6 +147,9 @@ function AddDestination() {
                     {error && <div>Something went wrong</div>}
                 </div>
             </div>
+            <br />
+            <br />
+            <br />
         </div>
     );
 }

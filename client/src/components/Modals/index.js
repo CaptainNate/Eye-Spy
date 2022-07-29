@@ -4,7 +4,6 @@ import Modal from 'react-bootstrap/Modal';
 
 function Modals(props) {
 
-
     return (
         <Modal
             {...props}

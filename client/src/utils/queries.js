@@ -8,14 +8,8 @@ query posts($username: String) {
       post_text
       createdAt
       location
-      like_count
-      hate_count
-      comments {
-        _id
-        comment_text
-        username
-        post
-      }
+      category
+      img
     }
   }
 `;
@@ -28,14 +22,7 @@ query posts($id: ID) {
       post_text
       createdAt
       location
-      like_count
-      hate_count
-      comments {
-        _id
-        comment_text
-        username
-        post
-      }
+      category
     }
   }
 `;
