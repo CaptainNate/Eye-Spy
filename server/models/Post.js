@@ -29,9 +29,12 @@ const PostSchema = new Schema(
     location: {
       type: String,
       required: false,
-      unique: true,
+      unique: false,
     },
-    // TO-DO: add image logic
+    img: {
+      data: Buffer,
+      contentType: String,
+    },
     username: {
       type: String,
       required: true,

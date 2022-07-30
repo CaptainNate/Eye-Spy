@@ -16,7 +16,7 @@ query posts($username: String) {
 
 export const QUERY_POST = gql`
 query posts($id: ID) {
-    posts(_id): $id) {
+    posts(_id: $id) {
       _id
       post_title
       post_text
@@ -58,7 +58,6 @@ query user($username: String!) {
             hates
         }
         favorites {
-            // not sure what to put in favorites
             _id
             username
         }
@@ -72,10 +71,10 @@ query user($username: String!) {
 } 
 `;
 
-export const QUERY_ME = gql`
+// export const QUERY_ME = gql`
 
-`;
+// `;
 
-export const QUERY_ME_BASIC = gql`
+// export const QUERY_ME_BASIC = gql`
 
-`;
+// `;
