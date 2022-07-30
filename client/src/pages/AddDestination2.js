@@ -38,8 +38,8 @@ function MyForm() {
     )
 }
 
-const root = document.getElementById('root');
-root.render(<MyForm />);
+// const root = document.getElementById('root');
+// root.render(<MyForm />);
 
 
 

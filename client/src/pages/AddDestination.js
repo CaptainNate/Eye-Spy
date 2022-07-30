@@ -20,13 +20,15 @@ function AddDestination() {
         setInputs(values => ({ ...values, [name]: value }))
     }
     
-    const [addPost, { error }] = useMutation(NEW_POST, {
-        update(cache, { data: { addPost } }) {
+    const [newPost, { error, data }] = useMutation(NEW_POST, {
+        update(cache, { data: { newPost } }) {
+            console.log(data)
+
             try {
                 const { posts } = cache.readQuery({ query: QUERY_POSTS });
                 cache.writeQuery({
                     query: QUERY_POSTS,
-                    data: { posts: [addPost, ...posts] },
+                    data: { posts: [newPost, ...posts] },
                 });
             } catch (e) {
                 console.error(e);
@@ -40,13 +42,13 @@ function AddDestination() {
 
 
         try {
-            await addPost({
+            await newPost({
                 // variables: { inputs.title, inputs.text, inputs.location, inputs.category, inputs.img },
                 variables: { inputs },
             });
 
-            inputs.title('');
-            inputs.text('');
+            inputs.post_title('');
+            inputs.post_text('');
             inputs.location('');
             inputs.category('');
             inputs.img('');

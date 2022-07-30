@@ -25,6 +25,7 @@ const typeDefs = gql`
     hate_count: Int
     comments: [Comment]
     img: String
+    category: String
   }
 
   type Comment {

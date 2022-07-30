@@ -8,21 +8,18 @@ query posts($username: String) {
       post_text
       createdAt
       location
-      category
-      img
     }
   }
 `;
 
 export const QUERY_POST = gql`
-query posts($id: ID) {
-    posts(_id: $id) {
+query post($id: ID!) {
+    post(_id: $id) {
       _id
       post_title
       post_text
       createdAt
       location
-      category
     }
   }
 `;
@@ -71,10 +68,22 @@ query user($username: String!) {
 } 
 `;
 
-// export const QUERY_ME = gql`
+export const QUERY_ME = gql`
+{
+    me {
+    _id
+    username
+    email
+  }
+}
+`;
 
-// `;
-
-// export const QUERY_ME_BASIC = gql`
-
-// `;
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
+      _id
+      username
+      email
+    }
+  }
+`;

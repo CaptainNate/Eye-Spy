@@ -26,18 +26,42 @@ export const LOGIN_USER = gql`
   }
 `;
 
+// export const NEW_POST = gql`
+// mutation NewPost($postTitle: String!, $postText: String!, $category: String, $location: String, $img: String) {
+//   newPost(post_title: $postTitle, post_text: $postText, category: $category, location: $location, img: $img) {
+//     post_title
+//     post_text
+//   }
+// }
+// `;
+// export const NEW_POST = gql`
+//   mutation newPost($post_title: String!, $post_text: String!, $location: String, $category: String, $img: String) {
+//     newPost(post_title: $post_title, post_text: $post_text, location: $location, category: $category, img: $img) {
+
+//       post {
+//         _id
+//         img
+//         post_title
+//         category
+//         post_text
+//         location
+//         createdAt
+//       }
+//     }
+//   }
+// `;
+
+
 export const NEW_POST = gql`
-  mutation newPost($post_title: String!, $post_text: String!, $location: String, $category: String, $img: String) {
-    newPost(post_title: $post_title, post_text: $post_text, location: $location, category: $category, img: $img) {
-      post {
-        _id
-        img
-        post_title
-        category
-        post_text
-        location
-        createdAt
-      }
+  mutation newPost($post_text: String!) {
+    newPost(post_text: $post_text) {
+      _id
+      img
+      post_title
+      category
+      post_text
+      location
+      createdAt
     }
   }
 `;
