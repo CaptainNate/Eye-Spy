@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client"
 import { NEW_POST } from '../utils/mutations'
-import { QUERY_POSTS } from "../utils/queries";
+import { QUERY_POSTS, QUERY_ME } from "../utils/queries";
 
 
 // component imports
@@ -20,26 +20,57 @@ function AddDestination() {
         setInputs(values => ({ ...values, [name]: value }))
     }
     
-    const [newPost, { error, data }] = useMutation(NEW_POST, {
+    const [newPost, { error }] = useMutation(NEW_POST, {
         update(cache, { data: { newPost } }) {
-            console.log(data)
+            console.log("AMO LEEE")
 
             try {
-                const { posts } = cache.readQuery({ query: QUERY_POSTS });
+                const { me } = cache.readQuery({ query: QUERY_ME });
                 cache.writeQuery({
-                    query: QUERY_POSTS,
-                    data: { posts: [newPost, ...posts] },
+                    query: QUERY_ME,
+                    data: { me: { ...me, posts: [...me.posts, newPost] } },
                 });
             } catch (e) {
                 console.error(e);
             }
+            const { posts } = cache.readQuery({ query: QUERY_POSTS });
+            cache.writeQuery({
+                query: QUERY_POSTS,
+                data: { posts: [newPost, ...posts] },
+            });
         },
     });
 
+
+    // const [addThought, { error }] = useMutation(ADD_THOUGHT, {
+    //     update(cache, { data: { addThought } }) {
+
+    //         // could potentially not exist yet, so wrap in a try/catch
+    //         try {
+    //             // update me array's cache
+    //             const { me } = cache.readQuery({ query: QUERY_ME });
+    //             cache.writeQuery({
+    //                 query: QUERY_ME,
+    //                 data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
+    //             });
+    //         } catch (e) {
+    //             console.warn("First thought insertion by user!")
+    //         }
+
+    //         // update thought array's cache
+    //         const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
+    //         cache.writeQuery({
+    //             query: QUERY_THOUGHTS,
+    //             data: { thoughts: [addThought, ...thoughts] },
+    //         });
+    //     }
+    // });
+
+  // update state based on form input changes
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         console.log(inputs);
-
+        console.log("LEE AMA MEDINA")
 
         try {
             await newPost({
