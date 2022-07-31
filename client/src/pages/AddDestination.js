@@ -11,6 +11,8 @@ import SuccessModal from '../components/SuccessModal';
 import Button from "react-bootstrap/Button";
 // import Auth from "../utils/Auth";
 
+const categories = ["Hiking Trails", "Camping", "Mountain Bike", "Swimming", "Water Sports"];
+
 function AddDestination() {
     const [inputs, setInputs] = useState({});
 
@@ -19,70 +21,46 @@ function AddDestination() {
         const value = event.target.value;
         setInputs(values => ({ ...values, [name]: value }))
     }
+
+    const [selected, setSelected] = useState(categories[0]);
     
     const [newPost, { error }] = useMutation(NEW_POST, {
         update(cache, { data: { newPost } }) {
-            console.log("AMO LEEE")
+            console.log(newPost);
 
             try {
-                const { me } = cache.readQuery({ query: QUERY_ME });
+                const { posts } = cache.readQuery({ query: QUERY_POSTS });
                 cache.writeQuery({
-                    query: QUERY_ME,
-                    data: { me: { ...me, posts: [...me.posts, newPost] } },
+                    query: QUERY_POSTS,
+                    data: { posts: [newPost, ...posts] },
                 });
             } catch (e) {
                 console.error(e);
             }
-            const { posts } = cache.readQuery({ query: QUERY_POSTS });
-            cache.writeQuery({
-                query: QUERY_POSTS,
-                data: { posts: [newPost, ...posts] },
-            });
         },
     });
 
-
-    // const [addThought, { error }] = useMutation(ADD_THOUGHT, {
-    //     update(cache, { data: { addThought } }) {
-
-    //         // could potentially not exist yet, so wrap in a try/catch
-    //         try {
-    //             // update me array's cache
-    //             const { me } = cache.readQuery({ query: QUERY_ME });
-    //             cache.writeQuery({
-    //                 query: QUERY_ME,
-    //                 data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
-    //             });
-    //         } catch (e) {
-    //             console.warn("First thought insertion by user!")
-    //         }
-
-    //         // update thought array's cache
-    //         const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
-    //         cache.writeQuery({
-    //             query: QUERY_THOUGHTS,
-    //             data: { thoughts: [addThought, ...thoughts] },
-    //         });
-    //     }
-    // });
 
   // update state based on form input changes
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         console.log(inputs);
-        console.log("LEE AMA MEDINA")
+
+        let postTitle = inputs.post_title;
+        let postText = inputs.post_text;
+        let location = inputs.location;
+        let category = selected;
+        let img = inputs.img;
+
+        console.log(postTitle);
+        console.log(typeof postTitle)
 
         try {
             await newPost({
                 // variables: { inputs.title, inputs.text, inputs.location, inputs.category, inputs.img },
-                variables: { inputs },
+                variables: { postTitle, postText, location, category, img },
             });
 
-            inputs.post_title('');
-            inputs.post_text('');
-            inputs.location('');
-            inputs.category('');
-            inputs.img('');
         } catch (e) {
             console.error(e);
         }
@@ -134,13 +112,15 @@ function AddDestination() {
                                         <h4 className="text-center my-4 pb-3 border-bottom border-dark subHeader-font">Please Select A Category</h4>
                                         <div>
                                             <div className="text-center">
-                                                <select name="category" className="category-btn p-2 rounded" placeholder='Select an outdoor activity' style={{ width: "100%" }}>
-                                                    <option value="" className="text-center" defaultValue={""}>Select an outdoor activity</option>
-                                                    <option value={inputs.category} onChange={handleChange} id="search-bar-hiking" className="text-center">Hiking Trails</option>
-                                                    <option value={inputs.category} onChange={handleChange} id="search-bar-camping" className="text-center">Camping</option>
-                                                    <option value={inputs.category} onChange={handleChange} id="search-bar-biking" className="text-center">Mountain Biking</option>
-                                                    <option value={inputs.category} onChange={handleChange} id="search-bar-swimming" className="text-center">Swimming</option>
-                                                    <option value={inputs.category} onChange={handleChange} id="search-bar-water-sport" className="text-center">Water Sports</option>
+                                                <select
+                                                    name="category" className="category-btn p-2 rounded" placeholder='Select an outdoor activity' style={{ width: "100%" }}
+                                                    value={selected}
+                                                    onChange={(e) => setSelected(e.target.value)}>
+                                                    {categories.map((value) => (
+                                                        <option value={value} key={value} className="text-center">
+                                                            {value}
+                                                        </option>
+                                                    ))}
                                                 </select>
                                             </div>
                                         </div>

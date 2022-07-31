@@ -53,15 +53,13 @@ export const LOGIN_USER = gql`
 
 
 export const NEW_POST = gql`
-  mutation newPost($post_text: String!) {
-    newPost(post_text: $post_text) {
-      _id
-      img
-      post_title
-      category
-      post_text
-      location
-      createdAt
-    }
+  mutation NewPost($postText: String!, $postTitle: String, $location: String, $category: String, $img: String) {
+  newPost(post_text: $postText, post_title: $postTitle, location: $location, category: $category, img: $img) {
+    _id
+    post_title
+    post_text
+    createdAt
+    location
   }
+}
 `;
