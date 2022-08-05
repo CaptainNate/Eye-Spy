@@ -7,18 +7,18 @@ function LikeDislikeButton() {
 
     const likes() {
         const [numberLike, setNumberLike] = useState(0);
+    }        
     
-        const increase = () => {
+    const increase = () => {
             setNumberLike((currentNumber) => currentNumber + 1);
         }
-    }
     
     const dislikes() {
         const [numberDislike, setNumberDislike] = useState(0);
-    
-        const decrease = () => {
-            setNumberDislike((currentNumber) => currentNumber - 1);
-        }
+    }
+
+    const decrease = () => {
+        setNumberDislike((currentNumber) => currentNumber - 1);
     }
 
   return (
