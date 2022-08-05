@@ -13,7 +13,7 @@ function LikeDislikeButton() {
             setNumberLike((currentNumber) => currentNumber + 1);
         }
     
-    const dislikes() {
+    const dislikes = () => {
         const [numberDislike, setNumberDislike] = useState(0);
     }
 
