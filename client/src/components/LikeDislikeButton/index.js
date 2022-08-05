@@ -13,6 +13,10 @@ const likes() {
 
 const dislikes() {
     const [numberDislike, setNumberDislike] = useState(0);
+
+    const decrease = () => {
+        setNumberDislike((currentNumber) => currentNumber - 1);
+    }
 }
 
 function LikeDislikeButton() {
