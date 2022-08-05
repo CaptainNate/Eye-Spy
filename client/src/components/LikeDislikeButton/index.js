@@ -3,9 +3,13 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 
-const likes() {}
+const likes() {
+    const [numberLike, setNumberLike] = useState(0);
+}
 
-const dislikes() {}
+const dislikes() {
+    const [numberDislike, setNumberDislike] = useState(0);
+}
 
 function LikeDislikeButton() {
   return (
