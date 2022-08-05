@@ -5,6 +5,10 @@ import { useState } from "react";
 
 const likes() {
     const [numberLike, setNumberLike] = useState(0);
+
+    const increase = () => {
+        setNumberLike((currentNumber) => currentNumber + 1);
+    }
 }
 
 const dislikes() {
