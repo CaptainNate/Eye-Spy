@@ -24,8 +24,8 @@ function LikeDislikeButton() {
     <div>
       <Container>
         <h1>{numberLike}</h1>
-      <Button onClick={} id="" className="all-btns">Like</Button>
-      <Button onClick={} id="" className="all-btns">Dislike</Button>
+      <Button onClick={increase} id="" className="all-btns">Like</Button>
+      <Button onClick={decrease} id="" className="all-btns">Dislike</Button>
       <h1>{numberDislike}</h1>
       </Container>
     </div>
