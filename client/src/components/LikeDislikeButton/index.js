@@ -16,6 +16,12 @@ function LikeDislikeButton() {
     setNumberDislike((currentNumber) => currentNumber - 1);
   };
 
+  // add an event listener that when button is clicked, gives it a new color (e.g. orange), and if it is orange and clicked again, it turns white/neutral.
+  // can try if statement for if state = false (not liked), turn button white, and if state = true (liked), turn button orange.
+
+  // add event listener when button clicked, turns it red and if it is red and clicked again, it turns white/neutral
+  // can try if statement for if state = false (not disliked), turn button white, and if state = true (disliked), turn button red
+
   return (
     <div>
       <Container>
