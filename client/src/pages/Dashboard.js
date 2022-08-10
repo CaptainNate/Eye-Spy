@@ -22,14 +22,14 @@ function Dashboard(props) {
                 <h1 className="mb-5 pb-3 border-bottom border-dark header-font text-center">Your Dashboard</h1>
             </div>
       <div className="d-flex row justify-content-center text-center">
-        <div className="col-5 p-4 m-2 shadow-lg floating-box-bg">
+        <div className="col-sm-10 col-lg-5 p-4 m-2 shadow-lg floating-box-bg">
           <div className="text-center">
             <h2 className='mb-4 pb-3 border-bottom border-dark header-font'>Welcome to Your Dashboard!</h2>
-            <p>Here you'll find the favorited locations you saved and find more new adventures!</p>
+            <p>Here you'll find the favorite locations you saved and find more new adventures!</p>
           </div>
         </div>
         {/* SEARCH NEW PLACES */}
-        <div className="col-5 p-4 m-2 shadow-lg floating-box-bg">
+        <div className="col-sm-10 col-lg-5 p-4 m-2 shadow-lg floating-box-bg">
           <div className='text-center'>
             <h2 className='mb-4 pb-3 border-bottom border-dark header-font'>Your next adventure is waiting!</h2>
             <h4 className='subHeader-font'>Please select the activity you're interested in</h4>

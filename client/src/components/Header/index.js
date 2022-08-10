@@ -60,13 +60,13 @@ function Header() {
                     Destination Search
                   </Nav.Link>
                   {/* <Nav.Link href='/search-results' className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end">View All Destinations</Nav.Link> */}
-                  <a
+                  <Nav.Link
                     href="/"
                     className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
                     onClick={logout}
                   >
                     Logout
-                  </a>
+                  </Nav.Link>
                 </>
               ) : (
                 <>

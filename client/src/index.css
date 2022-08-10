@@ -3,7 +3,7 @@
   --primary: #fff2bd;
   --secondary: #f7d02d;
   --tertiary: #ef7f1b;
-  --quatrinary: #ead16a;
+  --quaternary: #ead16a;
   --black: #000000;
 }
 
@@ -14,7 +14,6 @@
 
 html,
 body {
-  /* add font from google fonts */
   width: 100%;
   height: 100%;
   background-color: var(--secondary) !important;
@@ -35,13 +34,14 @@ body {
 }
 
 .font-color:hover {
-  color: var(--quatrinary);
+  color: var(--quaternary);
 }
 
 .all-btns {
-  background-color: var(--quatrinary) !important;
+  background-color: var(--quaternary) !important;
   border: 1px solid var(--black) !important;
   color: var(--black) !important;
+  text-align: center;
 }
 
 .all-btns:hover {
@@ -58,41 +58,10 @@ body {
 header {
   background-color: var(--primary);
 }
-/* 
-header img {
-  width: 10rem;
-  height: auto;
-}
-
-@media (min-width: 0) {
-  .navbar {
-    display: block;
-  }
-}
-@media (min-width: 576px) {
-  .navbar {
-    display: block;
-    width: 100%;
-  }
-
-  header img {
-    width: 10rem;
-    height: auto;
-  }
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-}
-@media (min-width: 1400px) {
-} */
 
 /* FOOTER */
 footer {
   background-color: var(--primary);
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -103,7 +72,7 @@ footer {
 }
 
 .landingPage-tertiaryBg {
-  background-color: var(--quatrinary) !important;
+  background-color: var(--quaternary) !important;
 }
 
 /* media queries for landing page */
@@ -115,8 +84,7 @@ footer {
 }
 
 .card-body {
-  min-height: 300px;
-  min-width: 300px;
+  padding-bottom: 5px;
   margin-right: 5px;
 }
 
@@ -126,7 +94,7 @@ footer {
 
 /* DASHBOARD */
 .dashboard-card-bg {
-  background-color: var(--quatrinary) !important;
+  background-color: var(--quaternary) !important;
 }
 
 .dashboard-btn {
@@ -154,13 +122,13 @@ footer {
 }
 
 .addDest-btn:hover {
-  background-color: var(--quatrinary) !important;
+  background-color: var(--quaternary) !important;
   border: 1px solid var(--black) !important;
   color: var(--black) !important;
 }
 
 .category-btn {
-  background-color: var(--quatrinary) !important;
+  background-color: var(--quaternary) !important;
   border: 1px solid var(--black) !important;
   color: var(--black) !important;
 }
@@ -177,5 +145,5 @@ footer {
   background: var(--primary) !important;
 }
 .modal-title-bg {
-  background-color: var(--quatrinary);
+  background-color: var(--quaternary);
 }
