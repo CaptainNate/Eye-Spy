@@ -131,7 +131,7 @@ function AddDestination() {
                                     <h4 className="text-center my-4 pb-3 border-bottom border-dark subHeader-font">Upload A Photo</h4>
                                     <div className="text-center">
                                         <label htmlFor="file" className="File"></label>
-                                        <input className="text-center" type="file" id="img-file" name="file" accept="image/*" onChange={loadFile} />
+                                        <input className="all-btns text-center" type="file" id="img-file" name="file" accept="image/*" onChange={loadFile} />
                                         <div className="col-12">
                                             {/* warning bc react wants an alt in the img element (alt is not necessary) */}
                                             <img id="output" className="m-3 " style={{ height: "250px" }} alt="..." value={inputs.Img} onChange={handleChange} />

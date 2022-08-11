@@ -1,6 +1,8 @@
 import React from 'react';
 import "../index.css";
 
+import Auth from "../utils/Auth";
+
 // image import
 import landingPageImg from '../images/landing-page-img.png';
 
@@ -55,6 +57,13 @@ function LandingPage() {
 
             {/* STILL NEED TO ADD IN RANDOM DESTINATIONS (WORK WITH BACKEND TEAM ON THIS) */}
 
+            {Auth.loggedIn() ? (
+                <>
+                    {/* Alternative text to display when signed-in */}
+                </>
+
+            ): (
+            <>
             {/* Sign Up Section */}
             <div className="py-5 my-5 text-center landingPage-secondaryBg shadow-lg rounded d-flex justify-content-center flex-wrap">
                 <h3 className="pb-3 col-6 subHeader-font border-bottom border-dark">Sign Up Today!</h3>
@@ -75,6 +84,8 @@ function LandingPage() {
                     </a>
                 </div>
             </div>
+                </>
+                )}
             <br/>
             <br/>
         </div>

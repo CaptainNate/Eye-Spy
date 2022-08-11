@@ -62,7 +62,6 @@ header {
 /* FOOTER */
 footer {
   background-color: var(--primary);
-  bottom: 0;
   width: 100%;
 }
 
@@ -112,6 +111,11 @@ footer {
 .contact-title {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+/* MINIMUM HEIGHT */
+.fill-height {
+  min-height: 72vh;
 }
 
 /* ADD DESTINATION */

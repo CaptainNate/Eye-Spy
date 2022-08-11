@@ -56,20 +56,19 @@ const handleChange = (event) => {
   // const [modalShow, setModalShow] = React.useState(false);
 
   return (
-    <main className="container p-5 mb-5">
+    <main className="container p-5 mb-5 fill-height">
       <div className="d-flex justify-content-center align-items-center">
-        <div className="px-5 mx-5">
-          <div>
+        <div className="d-none d-lg-block px-5 mx-3">
+          <div class="">
             <img
               src={loginImg}
-              class="d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block"
               alt="couple paddle boarding"
             />
           </div>
         </div>
         {/* will need to add the following line in the form */}
         {/* onSubmit={handleFormSubmit} */}
-        <form className="px-5 mx-5 col" onSubmit={handleFormSubmit}>
+        <form className="col" onSubmit={handleFormSubmit}>
           <div className="d-flex row">
             <div>
               <h1 className="mb-5 pb-3 border-bottom border-dark text-center header-font">

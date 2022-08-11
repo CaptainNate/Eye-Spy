@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="text-center container">
+    <div className="text-center container fill-height">
       <div className="m-5">
         <h1 className="fs-1 fw-bold mb-5 border-bottom border-dark pb-4">
           About Us
@@ -30,11 +30,11 @@ const AboutUs = () => {
           </p>
           <div className="">
             <a
-              className="all-btns p-2 rounded text-decoration-none px-5"
+              className="all-btns p-2 rounded text-decoration-none px-5 text-wrap"
               href="/contact-us"
               role="button"
             >
-              Questions? Contact Us!
+              Contact Us!
             </a>
           </div>
         </div>

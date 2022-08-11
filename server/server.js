@@ -54,7 +54,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
 const upload = multer({ dest: "uploads" })
 
 app.post("/", upload.single("file"), async (req, res, next) => {
-  console.log("CHUPA MUNDO: ", req.body)
+
   const fileData = {
     post_title: req.body.post_title,
     post_text: req.body.post_text,

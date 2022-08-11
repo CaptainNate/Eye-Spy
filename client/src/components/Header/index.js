@@ -59,6 +59,12 @@ function Header() {
                   >
                     Destination Search
                   </Nav.Link>
+                  <Nav.Link
+                    href="/contact-us"
+                    className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end"
+                  >
+                    Contact Us
+                  </Nav.Link>
                   {/* <Nav.Link href='/search-results' className="font-color px-3 text-decoration-none fs-6 d-flex justify-content-end">View All Destinations</Nav.Link> */}
                   <Nav.Link
                     href="/"
